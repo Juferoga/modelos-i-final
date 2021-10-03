@@ -9,7 +9,7 @@ Proyecto final de modelos 1, Juego monopoly
 
 ### Tareas
 
-"Trabajen vagos"
+"Trabajen vagosssss"
 
 - [ ] Anteproyecto
 - [ ] Diagrama Clases
