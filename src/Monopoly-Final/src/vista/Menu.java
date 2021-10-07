@@ -3,9 +3,9 @@ import java.awt.*;
 
 public class Menu {
     JFrame frame;
-    JLabel image = new JLabel(new ImageIcon("/home/juferoga/repos/ud/modelos-i-final/src/Assets/card-splash.png"));
+    JLabel image = new JLabel(new ImageIcon("modelos-i-final/src/Assets/card-splash.png"));
     JLabel text = new JLabel("Menú principal");
-    JButton cargar = new JButton("Cargar partida", new ImageIcon("/home/juferoga/repos/ud/modelos-i-final/src/Assets/editables/flag.svg"));
+    JButton cargar = new JButton("Cargar partida", new ImageIcon("modelos-i-final/src/Assets/editables/flag.svg"));
 
     Menu(){
         createGUI();

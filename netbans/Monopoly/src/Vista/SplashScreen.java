@@ -1,9 +1,15 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Vista;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class SplashScreen {
     JFrame frame;
-    JLabel image = new JLabel(new ImageIcon("/home/juferoga/repos/modelos-i-final/src/Assets/card-splash.png"));
+    JLabel image = new JLabel(new ImageIcon("/home/brayan/Imágenes/Carga2.jpeg"));
     JLabel text = new JLabel("Monopoly Game");
     JProgressBar progressBar = new JProgressBar();
     JLabel message = new JLabel();
@@ -67,7 +73,7 @@ public class SplashScreen {
                 message.setText("Cargando " + Integer.toString(i) + "%");
                 i++;
                 if (i == 100){
-                    Menu m = new Menu();
+                    Mesa m = new Mesa();
                     m.frame.setVisible(true);
                     frame.dispose();
                 }

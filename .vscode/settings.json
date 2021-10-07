@@ -1,6 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "src/Monopoly-Final/src/logica",
-        "src/Monopoly-Final/src/vista"
+        "src/Monopoly-Final/src/vista",
+        "src/Monopoly-Final/src"
     ]
 }
