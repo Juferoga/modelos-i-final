@@ -10,6 +10,7 @@ import negocio.Prototype.Tren;
 import negocio.Prototype.TrenCreador;
 
 public class Main {
+
     
 
     public static void main(String[] args) throws CloneNotSupportedException
@@ -54,6 +55,7 @@ public class Main {
          agua.Mostrar();
          Servicio luz = fabrica.getServicio("Electricidad");
          luz.Mostrar();
+         //--------------------------------Abstrac Factory------------------------//
             
     }
 }
