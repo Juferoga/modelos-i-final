@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "src/Monopoly-Final/src/vista",
-        "src/Monopoly-Final/src"
+        "src/Monopoly-Final/src",
+        "netbans/Monopoly/src/Vista"
     ]
 }

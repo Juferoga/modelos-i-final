@@ -5,16 +5,23 @@
 package Vista; 
 //package negocio.Jugadores.Jugador;
 import negocio.Jugadores.Jugador;
+import negocio.Tablero.Dado.Dado;
 import negocio.Tablero.Esquinas.*;
+import javax.swing.JPanel;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+    
 
 public class Mesa {
+    
+    private JPanel pimg;
     String nom1;
     JFrame frame;
-    JLabel image = new JLabel(new ImageIcon("/home/brayan/repos/modelos-i-final/src/Assets/Tablero.png"));
+    //Jpanel  = new javax.swing.JPanel();
+    JLabel image = new JLabel(new ImageIcon("/home/brayan/Imágenes/TableroF.png"));
+    JLabel F1 = new JLabel(new ImageIcon("/home/brayan/Imágenes/fichaAzul.png"));
     JLabel Titulo = new JLabel("Jugadores");
     JLabel Ju1 = new JLabel("Jugador 1 :");
     JLabel Ju1_nom = new JLabel("Nombre");
@@ -31,13 +38,19 @@ public class Mesa {
     JButton Mover = new JButton("Mover", new ImageIcon("/home/brayan/repos/modelos-i-final/src/Assets/editables/flag.svg"));
     JButton Lanzar = new JButton("Lanzar", new ImageIcon("/home/brayan/repos/modelos-i-final/src/Assets/editables/flag.svg"));
     JButton Comprar = new JButton("Comprar", new ImageIcon("/home/brayan/repos/modelos-i-final/src/Assets/editables/flag.svg"));
+    JLabel Dado2 = new JLabel("Dado2");
+    JLabel Dadon2 = new JLabel("Dado número 2..");
     String Nombre;
     String Nombre2;
     int saldo1;
     int saldo2;
+    int Dado_1;
+    int Dado_2;
+    int Dadosuma;
                
     Mesa(){
         
+        pimg = new JPanel();
         Jugador j1 = new Jugador();
         j1.setNombre("Rodolfo");
         Nombre=j1.getNombre();
@@ -48,6 +61,7 @@ public class Mesa {
         saldo2=j2.getSaldo();
         createGUI();
         addImage();
+        addF1();
         addTitulo();
         addJu1();
         addJu1_sal();
@@ -64,12 +78,16 @@ public class Mesa {
         addButton_Mover();
         addButton_Lanzar();
         addButton_Comprar();
+        addDado2();
+        addDadon2();
         frame.setVisible(true);
     }
     
     
-        Image img= new ImageIcon("/home/brayan/repos/modelos-i-final/src/Assets/Tablero.png").getImage();
+        Image img= new ImageIcon("/home/brayan/Imágenes/TableroF.png").getImage();
         ImageIcon img2=new ImageIcon(img.getScaledInstance(600, 600, Image.SCALE_SMOOTH));
+        Image img3= new ImageIcon("/home/brayan/Imágenes/fichaAzul.png").getImage();
+        ImageIcon img4=new ImageIcon(img3.getScaledInstance(50, 50, Image.SCALE_SMOOTH));
         
     public void createGUI(){    
         frame = new JFrame();
@@ -200,11 +218,35 @@ public class Mesa {
         Lanzar.setBounds(640,470, 100, 50);
         Lanzar.setBackground(Color.WHITE);
         frame.add(Lanzar);
+        Lanzar.addActionListener(new ActionListener(){  
+    public void actionPerformed(ActionEvent e){  
+              Dado d = new Dado();
+              Dadosuma = d.TirarDado();
+              Dado_1 = d.getD1();
+              Dadon.setText(String.valueOf(Dado_1));
+              Dado_2 = d.getD2();
+              Dadon2.setText(String.valueOf(Dado_2));
+              cambiarturno();
+              Mover.setEnabled(true);
+              Comprar.setEnabled(true);
+              
+    }  
+    });  
+        frame.add(Lanzar);
+    }
+    
+    private void cambiarturno(){
+        
+        if(Turn.getText()== Nombre2){
+              Turn.setText(Nombre);
+              }else{
+                  Turn.setText(Nombre2);
+              }
     }
        private void addButton_Comprar(){
         Comprar.setBounds(640,400, 100, 50);
         Comprar.setBackground(Color.WHITE);
-        Mover.setEnabled(false);
+        Comprar.setEnabled(false);
         frame.add(Comprar);
     }
 
@@ -213,5 +255,28 @@ public class Mesa {
         image.setIcon(img2);
         frame.add(image);
     }
+    
+    private void addF1() {
+        F1.setBounds(600,300,50,50);
+        F1.setIcon(img4);
+        frame.add(F1);
+    }
+    
+    private void addDado2() {    
+        Dado2.setFont(new Font("URW GOTHIC", Font.BOLD, 35));
+        Dado2.setBounds(820, 420, 200, 200);
+        Dado2.setForeground(Color.BLACK);
+        frame.add(Dado2);
+
+    }
+    
+    private void addDadon2() {    
+        Dadon2.setFont(new Font("URW GOTHIC", Font.BOLD, 15));
+        Dadon2.setBounds(820, 450, 200, 200);
+        Dadon2.setForeground(Color.BLACK);
+        frame.add(Dadon2);
+
+    }
+    
 }
 

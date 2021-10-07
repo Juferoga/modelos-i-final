@@ -9,7 +9,7 @@ import java.awt.*;
 
 public class SplashScreen {
     JFrame frame;
-    JLabel image = new JLabel(new ImageIcon("/home/brayan/Imágenes/Carga2.jpeg"));
+    JLabel image = new JLabel(new ImageIcon("/home/brayan/Imágenes/CarF.png"));
     JLabel text = new JLabel("Monopoly Game");
     JProgressBar progressBar = new JProgressBar();
     JLabel message = new JLabel();
