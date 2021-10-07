@@ -62,12 +62,15 @@ public class SplashScreen {
 
         while (i <= 100) {
             try {
-                Thread.sleep(50);
+                Thread.sleep(70);
                 progressBar.setValue(i);
                 message.setText("Cargando " + Integer.toString(i) + "%");
                 i++;
-                if (i == 100)
+                if (i == 100){
+                    Menu m = new Menu();
+                    m.frame.setVisible(true);
                     frame.dispose();
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
