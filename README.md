@@ -11,7 +11,7 @@ Proyecto final de modelos 1, Juego monopoly
 
 "Trabajen vagosssss"
 
-- [ ] Anteproyecto
+- [X] Anteproyecto
 - [ ] Diagrama Clases
 - [ ] Desarrollo
   - [ ] Lógica
