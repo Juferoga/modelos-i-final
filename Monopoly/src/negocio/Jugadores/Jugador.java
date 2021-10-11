@@ -5,6 +5,11 @@ import negocio.Tablero.Ficha.Ficha;
 public class Jugador extends Ficha{
     String nombre ;
     int saldo =50000;
+
+    public Jugador(String nombre, int posicion) {
+        super(posicion);
+        this.nombre = nombre;
+    }
   
     public String getNombre() {
         return nombre;

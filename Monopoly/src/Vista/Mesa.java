@@ -57,12 +57,10 @@ public class Mesa {
     
     Mesa(){
 
-        Jugador j1 = new Jugador();
-        j1.setNombre("Rodolfo");
+        Jugador j1 = new Jugador("Rodolfo", 0);
         Nombre=j1.getNombre();
         saldo1=j1.getSaldo();
-        Jugador j2 = new Jugador();
-        j2.setNombre("Antonio");
+        Jugador j2 = new Jugador("Antonio", 0);
         Nombre2=j2.getNombre();
         saldo2=j2.getSaldo();
         createGUI();
