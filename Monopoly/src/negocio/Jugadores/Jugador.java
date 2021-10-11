@@ -1,9 +1,10 @@
 package negocio.Jugadores;
 
-public class Jugador {
+import negocio.Tablero.Ficha.Ficha;
+
+public class Jugador extends Ficha{
     String nombre ;
     int saldo =50000;
-    
   
     public String getNombre() {
         return nombre;
