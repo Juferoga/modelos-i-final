@@ -48,8 +48,13 @@ public class Mesa {
     int Dado_1;
     int Dado_2;
     int Dadosuma;
-    boolean pares = false;
-               
+    boolean pares;
+
+    Image img= new ImageIcon(dir+"TableroF.png").getImage();
+    ImageIcon img2=new ImageIcon(img.getScaledInstance(600, 600, Image.SCALE_SMOOTH));
+    Image img3= new ImageIcon(dir+"fichaAzul.png").getImage();
+    ImageIcon img4=new ImageIcon(img3.getScaledInstance(50, 50, Image.SCALE_SMOOTH));           
+    
     Mesa(){
 
         Jugador j1 = new Jugador();
@@ -83,12 +88,6 @@ public class Mesa {
         addDadon2();
         frame.setVisible(true);
     }
-    
-    
-        Image img= new ImageIcon(dir+"TableroF.png").getImage();
-        ImageIcon img2=new ImageIcon(img.getScaledInstance(600, 600, Image.SCALE_SMOOTH));
-        Image img3= new ImageIcon(dir+"fichaAzul.png").getImage();
-        ImageIcon img4=new ImageIcon(img3.getScaledInstance(50, 50, Image.SCALE_SMOOTH));
         
     public void createGUI(){    
         frame = new JFrame();
@@ -96,7 +95,7 @@ public class Mesa {
         frame.setUndecorated(false);
         frame.setSize(980, 680);
         frame.setLocationRelativeTo(null);
-        frame.getContentPane().setBackground(Color.white);
+        //frame.getContentPane().setBackground(tablero);
     }
 
     private void addTitulo() {    
@@ -106,6 +105,7 @@ public class Mesa {
         frame.add(Titulo);
 
     }
+
     private void addJu1() {    
         Ju1.setFont(new Font("URW GOTHIC", Font.BOLD, 15));
         Ju1.setBounds(780, 100, 200, 200);
@@ -121,7 +121,6 @@ public class Mesa {
         frame.add(Ju1_sal);
 
     }
-    
         
     private void addJu1_nom() {    
         Ju1_nom.setFont(new Font("URW GOTHIC", Font.BOLD, 15));
@@ -132,7 +131,7 @@ public class Mesa {
 
     }
     
-        private void addJu1_sal_n() {    
+    private void addJu1_sal_n() {    
         Ju1_sal_n.setFont(new Font("URW GOTHIC", Font.BOLD, 15));
         Ju1_sal_n.setBounds(880, 140, 200, 200);
         Ju1_sal_n.setForeground(Color.BLACK);
@@ -156,7 +155,6 @@ public class Mesa {
         frame.add(Ju2_sal);
 
     }
-    
         
     private void addJu2_nom() {    
         Ju2_nom.setFont(new Font("URW GOTHIC", Font.BOLD, 15));
@@ -167,7 +165,7 @@ public class Mesa {
 
     }
     
-        private void addJu2_sal_n() {    
+    private void addJu2_sal_n() {    
         Ju2_sal_n.setFont(new Font("URW GOTHIC", Font.BOLD, 15));
         Ju2_sal_n.setBounds(880, 220, 200, 200);
         Ju2_sal_n.setForeground(Color.BLACK);
@@ -181,7 +179,6 @@ public class Mesa {
         Tur.setBounds(820, 280, 200, 200);
         Tur.setForeground(Color.BLACK);
         frame.add(Tur);
-
     }
     
     private void addTurn() {    
@@ -190,7 +187,6 @@ public class Mesa {
         Turn.setForeground(Color.BLACK);
         //Turn.setText(Nombre);
         frame.add(Turn);
-
     }
     
     private void addDado() {    
@@ -198,7 +194,6 @@ public class Mesa {
         Dado.setBounds(820, 360, 200, 200);
         Dado.setForeground(Color.BLACK);
         frame.add(Dado);
-
     }
     
     private void addDadon() {    
@@ -206,7 +201,6 @@ public class Mesa {
         Dadon.setBounds(820, 390, 200, 200);
         Dadon.setForeground(Color.BLACK);
         frame.add(Dadon);
-
     }
 
     private void addButton_Mover(){
@@ -220,43 +214,42 @@ public class Mesa {
         Lanzar.setBackground(Color.WHITE);
         frame.add(Lanzar);
         Lanzar.addActionListener(new ActionListener(){  
-    public void actionPerformed(ActionEvent e){  
-              
-        if (pares==false){
-                cambiarturno();
-                lanzar_Dados();
-              }else{
-                JOptionPane.showMessageDialog(frame, "Pares");
-                lanzar_Dados();
-              }
-              Mover.setEnabled(true);
-              Comprar.setEnabled(true);
-              
-    }  
-    });  
+            public void actionPerformed(ActionEvent e){        
+                if (pares==false){
+                    cambiarturno();
+                    lanzar_Dados();
+                }else{
+                    JOptionPane.showMessageDialog(frame, "Pares");
+                    lanzar_Dados();
+                }
+                Mover.setEnabled(true);
+                Comprar.setEnabled(true);
+            }  
+        });  
         frame.add(Lanzar);
     }
     
     private void cambiarturno(){
         
         if(Turn.getText()== Nombre){
-              Turn.setText(Nombre2);
-              }else{
-                  Turn.setText(Nombre);
-              }
+            Turn.setText(Nombre2);
+        }
+        else{
+            Turn.setText(Nombre);
+        }
     }
     
     private void lanzar_Dados(){
-              Dado d = new Dado();
-              Dadosuma = d.TirarDado();
-              Dado_1 = d.getD1();
-              Dadon.setText(String.valueOf(Dado_1));
-              Dado_2 = d.getD2();
-              Dadon2.setText(String.valueOf(Dado_2));
-              pares = d.getEstado();
+        Dado d = new Dado();
+        Dadosuma = d.TirarDado();
+        Dado_1 = d.getD1();
+        Dadon.setText(String.valueOf(Dado_1));
+        Dado_2 = d.getD2();
+        Dadon2.setText(String.valueOf(Dado_2));
+        pares = d.getEstado();
     }
     
-       private void addButton_Comprar(){
+    private void addButton_Comprar(){
         Comprar.setBounds(640,400, 100, 50);
         Comprar.setBackground(Color.WHITE);
         Comprar.setEnabled(false);
