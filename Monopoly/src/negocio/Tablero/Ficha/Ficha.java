@@ -22,183 +22,269 @@ public class Ficha {
     
     public Ficha(int posicion) {
         this.posicion = posicion;
-        
-        switch(posicion) {
-            case 1:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 2:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 3:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 4:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 5:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 6:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 7:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 8:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 9:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 10:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 11:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 12:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 13:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 14:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 15:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 16:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 17:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 18:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 19:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 20:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 21:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 22:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 23:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 24:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 25:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 26:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 27:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 28:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 29:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 30:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 31:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 32:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 33:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 34:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-	    case 35:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 36:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 37:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 38:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 39:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            case 40:
-                this.pos_x=20;
-                this.pos_y=20;
-            break;
-            default:
-                this.pos_x=10;
-                this.pos_y=10;
-        }
+        this.pos_x = calcPosicion_x(posicion);
+        this.pos_y = calcPosicion_y(posicion);
     }
 
    public Ficha(){
 	posicion = 0;
    } 
 
-   public int getPosicion(){
-   	return posicion;
+   public int calcPosicion_x(int posicion){
+
+        switch(posicion) {
+            case 1:
+                return 20;
+            break;
+            case 2:
+                return 20;
+            break;
+            case 3:
+                return 20;
+            break;
+            case 4:
+                return 20;
+            break;
+            case 5:
+                return 20;
+            break;
+            case 6:
+                return 20;
+            break;
+            case 7:
+                return 20;
+            break;
+            case 8:
+                return 20;
+            break;
+            case 9:
+                return 20;
+            break;
+            case 10:
+                return 20;
+            break;
+            case 11:
+                return 20;
+            break;
+            case 12:
+                return 20;
+            break;
+            case 13:
+                return 20;
+            break;
+            case 14:
+                return 20;
+            break;
+            case 15:
+                return 20;
+            break;
+            case 16:
+                return 20;
+            break;
+            case 17:
+                return 20;
+            break;
+            case 18:
+                return 20;
+            break;
+            case 19:
+                return 20;
+            break;
+            case 20:
+                return 20;
+            break;
+            case 21:
+                return 20;
+            break;
+            case 22:
+                return 20;
+            break;
+            case 23:
+                return 20;
+            break;
+            case 24:
+                return 20;
+            break;
+            case 25:
+                return 20;
+            break;
+            case 26:
+                return 20;
+            break;
+            case 27:
+                return 20;
+            break;
+            case 28:
+                return 20;
+            break;
+            case 29:
+                return 20;
+            break;
+            case 30:
+                return 20;
+            break;
+            case 31:
+                return 20;
+            break;
+            case 32:
+                return 20;
+            break;
+            case 33:
+                return 20;
+            break;
+            case 34:
+                return 20;
+            break;
+            case 35:
+                return 20;
+            break;
+            case 36:
+                return 20;
+            break;
+            case 37:
+                return 20;
+            break;
+            case 38:
+                return 20;
+            break;
+            case 39:
+                return 20;
+            break;
+            case 40:
+                return 20;
+            break;
+            default:
+                return 10;
+        }
+
    }
 
-   public void setPosicion(int pos){
-   	this.posicion = pos;
-   }
+   public int calcPosicion_y(int posicion){
+
+        switch(posicion) {
+            case 1:
+                return 20;
+            break;
+            case 2:
+                return 20;
+            break;
+            case 3:
+                return 20;
+            break;
+            case 4:
+                return 20;
+            break;
+            case 5:
+                return 20;
+            break;
+            case 6:
+                return 20;
+            break;
+            case 7:
+                return 20;
+            break;
+            case 8:
+                return 20;
+            break;
+            case 9:
+                return 20;
+            break;
+            case 10:
+                return 20;
+            break;
+            case 11:
+                return 20;
+            break;
+            case 12:
+                return 20;
+            break;
+            case 13:
+                return 20;
+            break;
+            case 14:
+                return 20;
+            break;
+            case 15:
+                return 20;
+            break;
+            case 16:
+                return 20;
+            break;
+            case 17:
+                return 20;
+            break;
+            case 18:
+                return 20;
+            break;
+            case 19:
+                return 20;
+            break;
+            case 20:
+                return 20;
+            break;
+            case 21:
+                return 20;
+            break;
+            case 22:
+                return 20;
+            break;
+            case 23:
+                return 20;
+            break;
+            case 24:
+                return 20;
+            break;
+            case 25:
+                return 20;
+            break;
+            case 26:
+                return 20;
+            break;
+            case 27:
+                return 20;
+            break;
+            case 28:
+                return 20;
+            break;
+            case 29:
+                return 20;
+            break;
+            case 30:
+                return 20;
+            break;
+            case 31:
+                return 20;
+            break;
+            case 32:
+                return 20;
+            break;
+            case 33:
+                return 20;
+            break;
+            case 34:
+                return 20;
+            break;
+            case 35:
+                return 20;
+            break;
+            case 36:
+                return 20;
+            break;
+            case 37:
+                return 20;
+            break;
+            case 38:
+                return 20;
+            break;
+            case 39:
+                return 20;
+            break;
+            case 40:
+                return 20;
+            break;
+            default:
+                return 10;
+        }
+
+    }
 }
