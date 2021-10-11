@@ -22,17 +22,17 @@ public class Ficha {
     
     public Ficha(int posicion) {
         this.posicion = posicion;
-        this.pos_x = calcPosicion_x(posicion);
-        this.pos_y = calcPosicion_y(posicion);
+//        this.pos_x = calcPosicion_x(posicion);
+//        this.pos_y = calcPosicion_y(posicion);
     }
 
    public Ficha(){
 	posicion = 0;
    } 
 
-   public int calcPosicion_x(int posicion){
+   /*public int calcPosicion_x(int posicion){
 
-        switch(posicion) {
+            switch(posicion) {
             case 1:
                 return 20;
             break;
@@ -286,5 +286,5 @@ public class Ficha {
                 return 10;
         }
 
-    }
+   }*/
 }
