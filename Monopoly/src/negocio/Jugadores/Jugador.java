@@ -27,7 +27,4 @@ public class Jugador extends Ficha{
         this.saldo = saldo;
     }
 
-    
-    
-    
 }

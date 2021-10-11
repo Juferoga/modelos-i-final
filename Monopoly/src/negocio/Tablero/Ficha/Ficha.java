@@ -14,6 +14,22 @@ public class Ficha {
    int pos_x;
    int pos_y;
 
+    public void setPosicion(int posicion) {
+        this.posicion = posicion;
+    }
+
+    public int getPosicion() {
+        return posicion;
+    }
+
+    public int getPos_x() {
+        return pos_x;
+    }
+
+    public int getPos_y() {
+        return pos_y;
+    }
+
     public Ficha(int posicion, int pos_x, int pos_y) {
         this.posicion = posicion;
         this.pos_x = pos_x;
