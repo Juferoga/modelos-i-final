@@ -68,7 +68,7 @@ public class Mesa {
         createGUI();
         addImage();
         addF1();
-        addPanel();
+        //addPanel();
         addTitulo();
         addJu1();
         addJu1_sal();
