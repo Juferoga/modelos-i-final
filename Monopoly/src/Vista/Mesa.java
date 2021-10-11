@@ -66,8 +66,8 @@ public class Mesa {
         Nombre2=j2.getNombre();
         saldo2=j2.getSaldo();
         createGUI();
-        //addImage();
-        //addF1();
+        addImage();
+        addF1();
         addPanel();
         addTitulo();
         addJu1();
@@ -269,15 +269,13 @@ public class Mesa {
     }
     
     private void addPanel(){
-        frame.add(tablero);
-        frame.add(F1);
         Imagenes.add(tablero);
         Imagenes.add(F1);
         //Imagenes.setLayout(absolute );
         //frame.getContentPane().setComponentZOrder(this.tablero, 0); // Arriba del todo.
         //rame.setComponentZOrder(this.F1, 1); // Debajo de la anterior.
-        frame.getContentPane().setLayout(new GridLayout(10,1));
-        F1.setBounds(600,600,41,41);
+        
+        //F1.setBounds(600,600,41,41);
         frame.add(Imagenes);
     }
     
