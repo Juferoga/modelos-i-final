@@ -12,13 +12,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-    
+
 
 public class Mesa {
     
     String dir = "/home/brayan/repos/modelos-i-final/Monopoly/src/assets/";
 
-    private JPanel pimg;
+    private JPanel Imagenes;
     String nom1;
     JFrame frame;
     JLabel tablero = new JLabel(new ImageIcon(dir+"TableroF.png"));
@@ -52,11 +52,13 @@ public class Mesa {
 
     Image img= new ImageIcon(dir+"TableroF.png").getImage();
     ImageIcon img2=new ImageIcon(img.getScaledInstance(600, 600, Image.SCALE_SMOOTH));
-    Image img3= new ImageIcon(dir+"fichaAzul.png").getImage();
-    ImageIcon img4=new ImageIcon(img3.getScaledInstance(50, 50, Image.SCALE_SMOOTH));           
+    //Image img3= new ImageIcon(dir+"fichaAzul.png").getImage();
+    //ImageIcon img4=new ImageIcon(img3.getScaledInstance(50, 50, Image.SCALE_SMOOTH));           
     
     Mesa(){
-
+        
+        Imagenes= new JPanel();
+        //Imagenes.setLayout(new GridLayout(1,2));
         Jugador j1 = new Jugador("Rodolfo", 0);
         Nombre=j1.getNombre();
         saldo1=j1.getSaldo();
@@ -66,6 +68,7 @@ public class Mesa {
         createGUI();
         addImage();
         addF1();
+        addPanel();
         addTitulo();
         addJu1();
         addJu1_sal();
@@ -127,7 +130,7 @@ public class Mesa {
         Ju1_nom.setText(Nombre);
         frame.add(Ju1_nom);
 
-    }
+}
     
     private void addJu1_sal_n() {    
         Ju1_sal_n.setFont(new Font("URW GOTHIC", Font.BOLD, 15));
@@ -259,16 +262,22 @@ public class Mesa {
         }); 
     }
 
-    private void addImage() {
+private void addImage() {
         tablero.setBounds(20,20,600,600);
         tablero.setIcon(img2);
         frame.add(tablero);
     }
     
+    private void addPanel(){
+        Imagenes.add(tablero);
+        Imagenes.setBounds(20,20,600,600);
+        frame.add(Imagenes);
+    }
+    
     private void addF1() {
-        F1.setBounds(600,300,50,50);
-        F1.setIcon(img4);
-        tablero.add(F1);
+        F1.setBounds(500,400,41,41);
+        frame.add(F1);
+
     }
     
     private void addDado2() {    
@@ -288,4 +297,3 @@ public class Mesa {
     }
     
 }
-
