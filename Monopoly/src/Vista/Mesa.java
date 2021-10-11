@@ -226,7 +226,11 @@ public class Mesa {
               Dadon.setText(String.valueOf(Dado_1));
               Dado_2 = d.getD2();
               Dadon2.setText(String.valueOf(Dado_2));
-              cambiarturno();
+              if (Dado_1 != Dado_2){
+                cambiarturno();
+              }else{
+                JOptionPane.showMessageDialog(frame, "Pares");
+              }
               Mover.setEnabled(true);
               Comprar.setEnabled(true);
               
@@ -248,6 +252,11 @@ public class Mesa {
         Comprar.setBackground(Color.WHITE);
         Comprar.setEnabled(false);
         frame.add(Comprar);
+        Comprar.addActionListener(new ActionListener(){  
+            public void actionPerformed(ActionEvent e){  
+                    
+            }  
+        }); 
     }
 
     private void addImage() {

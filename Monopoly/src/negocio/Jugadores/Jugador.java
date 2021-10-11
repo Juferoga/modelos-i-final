@@ -3,6 +3,7 @@ package negocio.Jugadores;
 public class Jugador {
     String nombre ;
     int saldo =50000;
+    
   
     public String getNombre() {
         return nombre;
@@ -20,6 +21,7 @@ public class Jugador {
         this.saldo = saldo;
     }
 
+    
     
     
 }
