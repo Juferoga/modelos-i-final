@@ -37,7 +37,7 @@ public class Dado {
     return dado;
   }
 
-    public boolean isEstado() {
+    public boolean getEstado() {
         return Estado;
     }
 

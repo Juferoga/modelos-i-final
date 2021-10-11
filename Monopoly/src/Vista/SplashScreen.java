@@ -8,8 +8,11 @@ import javax.swing.*;
 import java.awt.*;
 
 public class SplashScreen {
+
+     String dir = "/home/brayan/repos/modelos-i-final/Monopoly/src/assets/";
+
     JFrame frame;
-    JLabel image = new JLabel(new ImageIcon("/home/brayan/Imágenes/CarF.png"));
+    JLabel image = new JLabel(new ImageIcon(dir+"CarF.png"));
     JLabel text = new JLabel("Monopoly Game");
     JProgressBar progressBar = new JProgressBar();
     JLabel message = new JLabel();

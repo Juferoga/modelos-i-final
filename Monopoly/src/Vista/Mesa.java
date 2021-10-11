@@ -16,12 +16,13 @@ import java.awt.event.ActionEvent;
 
 public class Mesa {
     
+    String dir = "/home/brayan/repos/modelos-i-final/Monopoly/src/assets/";
+
     private JPanel pimg;
     String nom1;
     JFrame frame;
-    //Jpanel  = new javax.swing.JPanel();
-    JLabel image = new JLabel(new ImageIcon("/home/brayan/Imágenes/TableroF.png"));
-    JLabel F1 = new JLabel(new ImageIcon("/home/brayan/Imágenes/fichaAzul.png"));
+    JLabel tablero = new JLabel(new ImageIcon(dir+"TableroF.png"));
+    JLabel F1 = new JLabel(new ImageIcon(dir+"fichaAzul.png"));
     JLabel Titulo = new JLabel("Jugadores");
     JLabel Ju1 = new JLabel("Jugador 1 :");
     JLabel Ju1_nom = new JLabel("Nombre");
@@ -35,9 +36,9 @@ public class Mesa {
     JLabel Turn = new JLabel("Jugador..");
     JLabel Dado = new JLabel("Dado");
     JLabel Dadon = new JLabel("Dado numero..");
-    JButton Mover = new JButton("Mover", new ImageIcon("/home/brayan/repos/modelos-i-final/src/Assets/editables/flag.svg"));
-    JButton Lanzar = new JButton("Lanzar", new ImageIcon("/home/brayan/repos/modelos-i-final/src/Assets/editables/flag.svg"));
-    JButton Comprar = new JButton("Comprar", new ImageIcon("/home/brayan/repos/modelos-i-final/src/Assets/editables/flag.svg"));
+    JButton Mover = new JButton("Mover");
+    JButton Lanzar = new JButton("Lanzar");
+    JButton Comprar = new JButton("Comprar");
     JLabel Dado2 = new JLabel("Dado2");
     JLabel Dadon2 = new JLabel("Dado número 2..");
     String Nombre;
@@ -47,10 +48,10 @@ public class Mesa {
     int Dado_1;
     int Dado_2;
     int Dadosuma;
+    boolean pares = false;
                
     Mesa(){
-        
-        pimg = new JPanel();
+
         Jugador j1 = new Jugador();
         j1.setNombre("Rodolfo");
         Nombre=j1.getNombre();
@@ -84,9 +85,9 @@ public class Mesa {
     }
     
     
-        Image img= new ImageIcon("/home/brayan/Imágenes/TableroF.png").getImage();
+        Image img= new ImageIcon(dir+"TableroF.png").getImage();
         ImageIcon img2=new ImageIcon(img.getScaledInstance(600, 600, Image.SCALE_SMOOTH));
-        Image img3= new ImageIcon("/home/brayan/Imágenes/fichaAzul.png").getImage();
+        Image img3= new ImageIcon(dir+"fichaAzul.png").getImage();
         ImageIcon img4=new ImageIcon(img3.getScaledInstance(50, 50, Image.SCALE_SMOOTH));
         
     public void createGUI(){    
@@ -187,7 +188,7 @@ public class Mesa {
         Turn.setFont(new Font("URW GOTHIC", Font.BOLD, 15));
         Turn.setBounds(820, 320, 200, 200);
         Turn.setForeground(Color.BLACK);
-        Turn.setText(Nombre);
+        //Turn.setText(Nombre);
         frame.add(Turn);
 
     }
@@ -220,16 +221,13 @@ public class Mesa {
         frame.add(Lanzar);
         Lanzar.addActionListener(new ActionListener(){  
     public void actionPerformed(ActionEvent e){  
-              Dado d = new Dado();
-              Dadosuma = d.TirarDado();
-              Dado_1 = d.getD1();
-              Dadon.setText(String.valueOf(Dado_1));
-              Dado_2 = d.getD2();
-              Dadon2.setText(String.valueOf(Dado_2));
-              if (Dado_1 != Dado_2){
+              
+        if (pares==false){
                 cambiarturno();
+                lanzar_Dados();
               }else{
                 JOptionPane.showMessageDialog(frame, "Pares");
+                lanzar_Dados();
               }
               Mover.setEnabled(true);
               Comprar.setEnabled(true);
@@ -241,12 +239,23 @@ public class Mesa {
     
     private void cambiarturno(){
         
-        if(Turn.getText()== Nombre2){
-              Turn.setText(Nombre);
+        if(Turn.getText()== Nombre){
+              Turn.setText(Nombre2);
               }else{
-                  Turn.setText(Nombre2);
+                  Turn.setText(Nombre);
               }
     }
+    
+    private void lanzar_Dados(){
+              Dado d = new Dado();
+              Dadosuma = d.TirarDado();
+              Dado_1 = d.getD1();
+              Dadon.setText(String.valueOf(Dado_1));
+              Dado_2 = d.getD2();
+              Dadon2.setText(String.valueOf(Dado_2));
+              pares = d.getEstado();
+    }
+    
        private void addButton_Comprar(){
         Comprar.setBounds(640,400, 100, 50);
         Comprar.setBackground(Color.WHITE);
@@ -260,15 +269,15 @@ public class Mesa {
     }
 
     private void addImage() {
-        image.setBounds(20,20,600,600);
-        image.setIcon(img2);
-        frame.add(image);
+        tablero.setBounds(20,20,600,600);
+        tablero.setIcon(img2);
+        frame.add(tablero);
     }
     
     private void addF1() {
         F1.setBounds(600,300,50,50);
         F1.setIcon(img4);
-        frame.add(F1);
+        tablero.add(F1);
     }
     
     private void addDado2() {    
