@@ -36,47 +36,26 @@ public class Ficha {
         this.pos_y = pos_y;
     }
     
-    public Ficha(int posicion) {
+    /*public Ficha(int posicion) {
         this.posicion = posicion;
         this.pos_x = calcPosicion_x(posicion);
         this.pos_y = calcPosicion_y(posicion);
-    }
+    }*/
 
    public Ficha(){
 	posicion = 0;
    } 
 
    public int calcPosicion_x(int posicion){
-       if(posicion == 1 || posicion >= 32 || posicion <= 40){ return 25;  }
+       if(posicion == 1  ){ return 555;  }
        else{
-            if(posicion >= 11 || posicion <=21 ){ return 25*11; }
+            if(posicion == 2 ){ return 495; }
             else{
-                if (posicion == 2 || posicion == 31){ return 25*2; }
+                if (posicion >= 3 || posicion >= 11){ return 495 -(50*(posicion-2)); }
                 else{
-                    if (posicion == 3 || posicion == 30){ return 25*3; }
+                    if (posicion >= 21 || posicion == 31){ return 25*3; }
                     else{
-                        if (posicion == 4 || posicion == 29){ return 25*4; }
-                        else{
-                            if (posicion == 5 || posicion == 28){ return 25*5; }
-                            else{
-                                if (posicion == 6 || posicion == 27){ return 25*6; }
-                                else{
-                                    if (posicion == 7 || posicion == 26){ return 25*7; }
-                                    else{
-                                        if (posicion == 8 || posicion == 25){ return 25*8; }
-                                        else{
-                                            if (posicion == 9 || posicion == 24){ return 25*9; }
-                                            else{
-                                                if (posicion == 10 || posicion == 25){ return 25*10; }
-                                                else{
-                                                    return 0;
-                                                }
-                                            }
-                                        }
-                                    }   
-                                }
-                            }
-                        }
+                        return 0;
                     }
                 }
             }

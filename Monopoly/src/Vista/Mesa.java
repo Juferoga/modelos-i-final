@@ -7,6 +7,7 @@ package Vista;
 import negocio.Jugadores.Jugador;
 import negocio.Tablero.Dado.Dado;
 import negocio.Tablero.Esquinas.*;
+import negocio.Tablero.Ficha.Ficha;
 import javax.swing.JPanel;
 import javax.swing.*;
 import java.awt.*;
@@ -48,6 +49,7 @@ public class Mesa {
     int Dado_1;
     int Dado_2;
     int Dadosuma;
+    int fposicion=1;
     boolean pares;
 
     Image img= new ImageIcon(dir+"TableroF.png").getImage();
@@ -209,6 +211,18 @@ public class Mesa {
         Mover.setBackground(Color.WHITE);
         Mover.setEnabled(false);
         frame.add(Mover);
+        Mover.addActionListener(new ActionListener(){  
+            public void actionPerformed(ActionEvent e){        
+                Ficha f = new Ficha();
+                int x;
+                int y;
+                fposicion = fposicion +1;
+                x = f.calcPosicion_x(fposicion);
+                F1.setBounds(x,560,41,41);
+                
+            }  
+        }); 
+        
     }
     private void addButton_Lanzar(){
         Lanzar.setBounds(640,470, 100, 50);
@@ -262,7 +276,7 @@ public class Mesa {
         }); 
     }
 
-private void addImage() {
+    private void addImage() {
         tablero.setBounds(20,20,600,600);
         tablero.setIcon(img2);
         frame.add(tablero);
@@ -275,7 +289,7 @@ private void addImage() {
     }
     
     private void addF1() {
-        F1.setBounds(500,400,41,41);
+        F1.setBounds(555,560,41,41);
         frame.add(F1);
 
     }
