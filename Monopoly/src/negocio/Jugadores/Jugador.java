@@ -3,12 +3,14 @@ package negocio.Jugadores;
 import negocio.Tablero.Ficha.Ficha;
 
 public class Jugador /*extends Ficha*/{
-    String nombre ;
-    int saldo =50000;
+    String nombre;
+    int saldo;
+    private boolean carcel;
 
-    public Jugador(String nombre, int posicion) {
-//        super(posicion);
+    public Jugador(String nombre) {
         this.nombre = nombre;
+        this.saldo = 50000;
+        this.carcel = false;
     }
   
     public String getNombre() {
@@ -25,6 +27,14 @@ public class Jugador /*extends Ficha*/{
 
     public void setSaldo(int saldo) {
         this.saldo = saldo;
+    }
+
+    public boolean isCarcel() {
+        return carcel;
+    }
+
+    public void setCarcel(boolean carcel) {
+        this.carcel = carcel;
     }
 
 }

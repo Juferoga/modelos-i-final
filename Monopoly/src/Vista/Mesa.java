@@ -19,7 +19,8 @@ public class Mesa {
 
     // Juferoga :)
     
-    String dir = "/home/brayan/repos/modelos-i-final/Monopoly/src/assets/";
+    String dir = "/home/juferoga/repos/ud/modelos-i-final/Monopoly/src/assets/";
+    //            /home/juferoga/repos/ud/modelos-i-final/Monopoly/src/assets/
 
     private JPanel Imagenes;
     String nom1;
@@ -47,6 +48,8 @@ public class Mesa {
     String Nombre2;
     int saldo1;
     int saldo2;
+    boolean carcel1;
+    boolean carcel2;
     int Dado_1;
     int Dado_2;
     int Dadosuma;
@@ -56,20 +59,22 @@ public class Mesa {
     boolean pares;
 
     Image img= new ImageIcon(dir+"TableroF.png").getImage();
-    ImageIcon img2=new ImageIcon(img.getScaledInstance(600, 600, Image.SCALE_SMOOTH));
-    //Image img3= new ImageIcon(dir+"fichaAzul.png").getImage();
-    //ImageIcon img4=new ImageIcon(img3.getScaledInstance(50, 50, Image.SCALE_SMOOTH));           
+    ImageIcon img2=new ImageIcon(img.getScaledInstance(600, 600, Image.SCALE_SMOOTH));           
     
     Mesa(){
         
         Imagenes= new JPanel();
-        //Imagenes.setLayout(new GridLayout(1,2));
-        Jugador j1 = new Jugador("Rodolfo", 0);
+        
+        Jugador j1 = new Jugador("Rodolfo");
         Nombre=j1.getNombre();
         saldo1=j1.getSaldo();
-        Jugador j2 = new Jugador("Antonio", 0);
+        carcel1= j1.isCarcel();
+        
+        Jugador j2 = new Jugador("Antonio");
         Nombre2=j2.getNombre();
         saldo2=j2.getSaldo();
+        carcel2= j2.isCarcel();
+        
         createGUI();
         addImage();
         addF1();
@@ -100,7 +105,6 @@ public class Mesa {
         frame.setUndecorated(false);
         frame.setSize(980, 680);
         frame.setLocationRelativeTo(null);
-        //frame.getContentPane().setBackground(tablero);
     }
 
     private void addTitulo() {    
@@ -260,6 +264,8 @@ public class Mesa {
                     cambiarturno();
                     lanzar_Dados();
                 }else{
+                    carcel1 = true; 
+                    carcel2 = true;
                     JOptionPane.showMessageDialog(frame, "Pares");
                     lanzar_Dados();
                 }
@@ -286,33 +292,63 @@ public class Mesa {
         Dado_2 = d.getD2();
         Dadon2.setText(String.valueOf(Dado_2));
         pares = d.getEstado();
-        if(Turn.getText()== Nombre){
-        fposicion=fposicion+Dadosuma;
-        Mover_j1();
-        if(fposicion>40){
-            int r= 0;
-            fposicion=r;
-        }
+        
+        if(Turn.getText()== Nombre && this.carcel1){
+            System.out.println((char)27 + "[31m__________________________PLAYER_1_______________________"+ (char)27 + "[0m");
+            System.out.println("Posición previa "+this.fposicion+" Dados "+this.Dadosuma);
+            int sposicion=fposicion+Dadosuma;
+            if(sposicion >= 40){
+                fposicion = sposicion-40;
+                if(fposicion == 0){
+                    fposicion = 1;
+                }
+            }else{
+                fposicion=fposicion+Dadosuma;
+            }
+            System.out.println("Posición actual"+this.fposicion);
+            Mover_j1();
+
+            if(fposicion >= 40){
+
+                fposicion=fposicion-40+1;
+            }
         }else{
-            if(Turn.getText()== Nombre2){      
-                fposicion2=fposicion2+Dadosuma;
+            if(Turn.getText()== Nombre2 && this.carcel2){      
+                System.out.println((char)27 + "[32m__________________________PLAYER_2_______________________"+ (char)27 + "[0m");
+                System.out.println("Posición previa "+this.fposicion2+" Dados "+this.Dadosuma);
+                int sposicion2=fposicion2+Dadosuma;
+                if(sposicion2 >= 40){
+                    fposicion2 = sposicion2-40;
+                    if(fposicion2 == 0){
+                        fposicion2 = 1;
+                    }
+                    }else{
+                        fposicion2=fposicion2+Dadosuma;
+                    }
+                System.out.println("Posición actual"+this.fposicion2);
                 Mover_j2();
-                if(fposicion2>40){
-                    int r= 0;
-                    fposicion2=r;
+
+                if(fposicion2 >= 40){
+
+                fposicion2=fposicion2-40+1;
                 }
             }
         }
+        
         if(fposicion ==31 ){
             fposicion = 11;
+            carcel1 = false;
             JOptionPane.showMessageDialog(frame, "Ve a la carcel");
             Mover_j1();
+            System.out.println((char)27 + "[31m Carcel: "+carcel1+(char)27 + "[0m");
         }
         
         if(fposicion2 ==31 ){
             fposicion2 = 11;
+            carcel2 = false;
             JOptionPane.showMessageDialog(frame, "Ve a la carcel");
             Mover_j2();
+            System.out.println((char)27 + "[32m Carcel: "+carcel2+(char)27 + "[0m");
         }      
     }
     
