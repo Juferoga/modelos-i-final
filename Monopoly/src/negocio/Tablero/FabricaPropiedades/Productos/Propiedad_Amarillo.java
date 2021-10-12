@@ -1,6 +1,10 @@
 package negocio.Tablero.FabricaPropiedades.Productos;
 
 public class Propiedad_Amarillo implements Propiedad {
+    
+    private String Nombre;
+    private int Precio;
+    private boolean Comprado;
 
     @Override
     public void Mostrar() {

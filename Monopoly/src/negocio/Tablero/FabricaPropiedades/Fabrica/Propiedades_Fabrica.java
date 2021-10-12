@@ -8,6 +8,7 @@ import negocio.Tablero.FabricaPropiedades.Productos.Propiedad_Morado;
 import negocio.Tablero.FabricaPropiedades.Productos.Propiedad_Rojo;
 import negocio.Tablero.FabricaPropiedades.Productos.Propiedad_Verde;
 import negocio.Tablero.FabricaPropiedades.Productos.Propiedad_naranja;
+import negocio.Tablero.FabricaPropiedades.Productos.Propiedad_Violeta;
 
 public class Propiedades_Fabrica {
     
@@ -27,6 +28,8 @@ public class Propiedades_Fabrica {
             return new Propiedad_Azul();
         } else if (tipo.equalsIgnoreCase("amarillo")){
             return new Propiedad_Amarillo();
+        }else if (tipo.equalsIgnoreCase("violeta")){
+            return new Propiedad_Violeta();
         }else{
             return null;
         }

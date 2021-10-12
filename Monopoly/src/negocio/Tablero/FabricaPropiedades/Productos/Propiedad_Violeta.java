@@ -1,6 +1,6 @@
 package negocio.Tablero.FabricaPropiedades.Productos;
 
-public class Propiedad_Azul implements Propiedad {
+public class Propiedad_Violeta implements Propiedad{
 
     private String Nombre;
     private int Precio;
@@ -8,7 +8,6 @@ public class Propiedad_Azul implements Propiedad {
 
     @Override
     public void Mostrar() {
-        System.out.println("Creo propiedad Azul");
-    }
-    
+        System.out.println("Creo estrato2 Violeta");
+    } 
 }

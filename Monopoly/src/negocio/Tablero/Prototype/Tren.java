@@ -3,7 +3,7 @@ package negocio.Tablero.Prototype;
 public abstract class Tren implements Cloneable {
 
     private String Nombre;
-    private int Precio = 100;
+    private int Precio = 200;
     private boolean Comprado = false;
 
     public Tren clone() throws CloneNotSupportedException {
