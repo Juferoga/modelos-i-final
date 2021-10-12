@@ -4,6 +4,11 @@
  */
 package Vista;
 
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 import negocio.Tablero.FabricaPropiedades.Fabrica.Propiedades_Fabrica;
 import negocio.Tablero.FabricaPropiedades.Productos.Propiedad;
 import negocio.Tablero.FactoryMethod.Servicio;
@@ -13,82 +18,55 @@ import negocio.Tablero.Flyweight.FlyweightSuerte;
 import negocio.Tablero.Prototype.Tren;
 import negocio.Tablero.Prototype.TrenCreador;
 
+
 /**
  *
  * @author juferoga
  */
 public class Operaciones {
+    
+    JFrame frame;
+    JLabel Titulo = new JLabel("Propiedades");
+    JLabel nPropiedad = new JLabel("nombre de la propiedad..");
+    JLabel Propiedad = new JLabel("Propiedad:");
+    JLabel precio = new JLabel("Precio :");
+    JLabel nprecio = new JLabel("Precio de la propiedad..");
+    JLabel Ju = new JLabel("Jugador :");
+    JLabel Ju_nom = new JLabel("Nombre..");
+    JButton Comprar = new JButton("Comprar");
+    JButton Embargar = new JButton("Embargar");
 
     public Operaciones() {
-        
-        //-----------------------------Factory Method--------------------------//
-        Propiedades_Fabrica p_fabrica = new Propiedades_Fabrica();    
+     createGUI();
+     addTitulo();
+     addPropiedad();
+     frame.setVisible(true);
+    
+    }    
+    
+    public void createGUI(){    
+        frame = new JFrame();
+        frame.getContentPane().setLayout(null);
+        frame.setUndecorated(false);
+        frame.setSize(400, 500);
+        frame.setLocationRelativeTo(null);
+        //frame.getContentPane().setBackground(tablero);
+    }
 
-        Propiedad almacenesTriunfo = p_fabrica.getTipo("amarillo");
-        Propiedad almacenesLa18 = p_fabrica.getTipo("amarillo");    
-        Propiedad almacenesMiCasa = p_fabrica.getTipo("amarillo");    
+    private void addTitulo() {    
+        Titulo.setFont(new Font("URW GOTHIC", Font.BOLD, 20));
+        Titulo.setBounds(140,0, 200, 100);
+        Titulo.setForeground(Color.BLACK);
+        frame.add(Titulo);
 
-        Propiedad calleBachue = p_fabrica.getTipo("naranja");
-        Propiedad calleIguaque = p_fabrica.getTipo("naranja");
-        Propiedad calleBague = p_fabrica.getTipo("naranja");
-
-        Propiedad rinhoMail = p_fabrica.getTipo("morado");
-        Propiedad almacenesPiloto = p_fabrica.getTipo("morado");
-        Propiedad tiendasArgo = p_fabrica.getTipo("morado");
-
-        Propiedad cafeArabe = p_fabrica.getTipo("marron");
-        Propiedad cafeOmg = p_fabrica.getTipo("marron");
-
-        Propiedad saludSms = p_fabrica.getTipo("verde");
-        Propiedad saludCtr = p_fabrica.getTipo("verde");
-        Propiedad saludInt = p_fabrica.getTipo("verde");
-
-        Propiedad zapateria = p_fabrica.getTipo("rojo");
-        Propiedad bolsosMochilas = p_fabrica.getTipo("rojo");
-        Propiedad Accesorios = p_fabrica.getTipo("rojo");
-
-        Propiedad amarilloRadio = p_fabrica.getTipo("azul");
-        Propiedad amarilloNoticias = p_fabrica.getTipo("azul");
-        Propiedad amarilloCCTV = p_fabrica.getTipo("azul");
-
-        //-----------------------Pratron flyweight-------------------------//
-        FlyweightSuerte Fortuna1 = FabricaSuerte.getFortuna( "FORTUNA" );
-        FlyweightSuerte Fortuna2 = FabricaSuerte.getFortuna( "FORTUNA" );
-        FlyweightSuerte Fortuna3 = FabricaSuerte.getFortuna( "FORTUNA" );
-        
-        FlyweightSuerte suerte1 = FabricaSuerte.getSuerte( "Suerte" );
-        FlyweightSuerte suerte2 = FabricaSuerte.getSuerte( "Suerte" );
-        FlyweightSuerte suerte3 = FabricaSuerte.getSuerte( "Suerte" );
-
-        //-----------------Patron prototype----------------------------------//
-        
-        Tren tren = new TrenCreador();
-        try {
-            Tren tren2 = tren.clone();
-            Tren tren3 = tren.clone();
-            Tren tren4 = tren.clone();
-        }
-        catch(Exception e) {
-            System.out.println(e);
-        }
-
-        //-----------------------------Factory Method--------------------------//
-        ServicioFabrica fabrica = new ServicioFabrica();
-        Servicio luz = fabrica.getServicio("Electricidad");
-        Servicio agua = fabrica.getServicio("Acueducto");
-        
     }
     
-    public int transferir(){
-        return 1;
-    }
+    private void addPropiedad() {    
+        Propiedad.setFont(new Font("URW GOTHIC", Font.BOLD, 15));
+        Propiedad.setBounds(20,50, 200, 100);
+        Propiedad.setForeground(Color.BLACK);
+        frame.add(Propiedad);
 
-    public int comprar(){
-        return 1;
-    }
-    
-    public int vender(){
-        return 1;
     }
     
 }
