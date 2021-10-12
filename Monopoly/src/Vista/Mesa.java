@@ -40,9 +40,7 @@ public class Mesa {
     JLabel Turn = new JLabel("Jugador..");
     JLabel Dado = new JLabel("Dado");
     JLabel Dadon = new JLabel("Dado numero..");
-    JButton Mover = new JButton("Mover");
     JButton Lanzar = new JButton("Lanzar");
-    JButton Comprar = new JButton("Comprar");
     JLabel Dado2 = new JLabel("Dado2");
     JLabel Dadon2 = new JLabel("Dado número 2..");
     String Nombre;
@@ -90,9 +88,7 @@ public class Mesa {
         addTurn();
         addDado();
         addDadon();
-        addButton_Mover();
         addButton_Lanzar();
-        addButton_Comprar();
         addDado2();
         addDadon2();
         frame.setVisible(true);
@@ -211,23 +207,7 @@ public class Mesa {
         Dadon.setForeground(Color.BLACK);
         frame.add(Dadon);
     }
-
-    private void addButton_Mover(){
-        Mover.setBounds(640,540, 100, 50);
-        Mover.setBackground(Color.WHITE);
-        Mover.setEnabled(false);
-        frame.add(Mover);
-        Mover.addActionListener(new ActionListener(){  
-            public void actionPerformed(ActionEvent e){                
-                if(Turn.getText()== Nombre){
-                Mover_j1();
-                }else{
-                    if(Turn.getText()== Nombre2){ Mover_j2();}
-                    
-                }
-            }  
-        }); 
-    }
+    
     private void Mover_j1(){
     Ficha f = new Ficha();
     if(fposicion >=1 && fposicion<=11   ){
@@ -283,8 +263,6 @@ public class Mesa {
                     JOptionPane.showMessageDialog(frame, "Pares");
                     lanzar_Dados();
                 }
-                Mover.setEnabled(true);
-                Comprar.setEnabled(true);
             }  
         });  
         frame.add(Lanzar);
@@ -310,6 +288,7 @@ public class Mesa {
         pares = d.getEstado();
         if(Turn.getText()== Nombre){
         fposicion=fposicion+Dadosuma;
+        Mover_j1();
         if(fposicion>40){
             int r= 0;
             fposicion=r;
@@ -317,6 +296,7 @@ public class Mesa {
         }else{
             if(Turn.getText()== Nombre2){      
                 fposicion2=fposicion2+Dadosuma;
+                Mover_j2();
                 if(fposicion2>40){
                     int r= 0;
                     fposicion2=r;
@@ -325,18 +305,6 @@ public class Mesa {
         }      
     }
     
-    private void addButton_Comprar(){
-        Comprar.setBounds(640,400, 100, 50);
-        Comprar.setBackground(Color.WHITE);
-        Comprar.setEnabled(false);
-        frame.add(Comprar);
-        Comprar.addActionListener(new ActionListener(){  
-            public void actionPerformed(ActionEvent e){  
-                    
-            }  
-        }); 
-    }
-
     private void addImage() {
         tablero.setBounds(20,20,600,600);
         tablero.setIcon(img2);
