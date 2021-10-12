@@ -47,15 +47,19 @@ public class Ficha {
    } 
 
    public int calcPosicion_x(int posicion){
+       
        if(posicion == 1  ){ return 555;  }
        else{
             if(posicion == 2 ){ return 495; }
             else{
-                if (posicion >= 3 || posicion >= 11){ return 495 -(50*(posicion-2)); }
+                if (posicion >= 3 && posicion <= 11){ return 495 -(50*(posicion-2)); }
                 else{
-                    if (posicion >= 22 || posicion >= 31){ return 105; }
+                    if (posicion == 22 ){ return 105; }
                     else{
-                        return 0;
+                        if(posicion >= 23 && posicion <= 31){ return 105 + (50*(posicion-22));}
+                        else{
+                            return 0;
+                        }
                     }
                 }
             }
@@ -65,11 +69,14 @@ public class Ficha {
    public int calcPosicion_y(int posicion){
             if(posicion == 12 ){ return 510; }
             else{
-                if (posicion >= 13 || posicion >= 21){ return 510-(50 * (posicion-12)); }
+                if (posicion >= 13 && posicion <= 21){ return 510-(50 * (posicion-12)); }
                 else{
-                    if (posicion >= 31 || posicion == 50){ return 25*3; }
+                    if (posicion == 32){ return 105; }
                     else{
-                        return 0;
+                        if(posicion >= 33 && posicion <= 40){return 105 + (50*(posicion-32));}
+                        else{
+                            return 0;
+                        }
                     }
                 }
             }  

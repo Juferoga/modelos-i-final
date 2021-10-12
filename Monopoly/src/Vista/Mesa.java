@@ -24,6 +24,7 @@ public class Mesa {
     JFrame frame;
     JLabel tablero = new JLabel(new ImageIcon(dir+"TableroF.png"));
     JLabel F1 = new JLabel(new ImageIcon(dir+"fichaAzul.png"));
+    JLabel F2 = new JLabel(new ImageIcon(dir+"fichaRoja.png"));
     JLabel Titulo = new JLabel("Jugadores");
     JLabel Ju1 = new JLabel("Jugador 1 :");
     JLabel Ju1_nom = new JLabel("Nombre");
@@ -49,7 +50,9 @@ public class Mesa {
     int Dado_1;
     int Dado_2;
     int Dadosuma;
-    int fposicion=1;
+    int fposicion=0;
+    int fposicion2=0;
+    int x,y;
     boolean pares;
 
     Image img= new ImageIcon(dir+"TableroF.png").getImage();
@@ -70,6 +73,7 @@ public class Mesa {
         createGUI();
         addImage();
         addF1();
+        addF2();
         addPanel();
         addTitulo();
         addJu1();
@@ -212,26 +216,57 @@ public class Mesa {
         Mover.setEnabled(false);
         frame.add(Mover);
         Mover.addActionListener(new ActionListener(){  
-            public void actionPerformed(ActionEvent e){        
-                Ficha f = new Ficha();
-                int x;
-                int y;
-                fposicion = fposicion +1;
-                if(fposicion >=1 && fposicion<=11  ){
-                x = f.calcPosicion_x(fposicion);
-                F1.setBounds(x,560,41,41);
+            public void actionPerformed(ActionEvent e){                
+                if(Turn.getText()== Nombre){
+                Mover_j1();
                 }else{
-                    if(fposicion >=12 && fposicion <=21){
-                        y = f.calcPosicion_y(fposicion);F1.setBounds(45,y,41,41);}
-                    else{
-                        if(fposicion >=22 && fposicion<=31){
-                        x = f.calcPosicion_x(fposicion); F1.setBounds(x,60,41,41);
-                        }
-                    }
+                    if(Turn.getText()== Nombre2){ Mover_j2();}
+                    
                 }
             }  
         }); 
-        
+    }
+    private void Mover_j1(){
+    Ficha f = new Ficha();
+    if(fposicion >=1 && fposicion<=11   ){
+                x = f.calcPosicion_x(fposicion);
+                F1.setBounds(x,560,41,41);Ju1_sal_n.setText(String.valueOf(fposicion));
+                x=0;
+                }else{
+                    if(fposicion >=12 && fposicion <=21 ){
+                        y = f.calcPosicion_y(fposicion);F1.setBounds(45,y,41,41);Ju1_sal_n.setText(String.valueOf(fposicion));}
+                    else{
+                        if(fposicion >=22 && fposicion <=31){
+                        x = f.calcPosicion_x(fposicion); F1.setBounds(x,60,41,41);Ju1_sal_n.setText(String.valueOf(fposicion));
+                        }
+                        else{
+                            if(fposicion >=32 && fposicion <=40){
+                            y = f.calcPosicion_y(fposicion);F1.setBounds(555,y,41,41);Ju1_sal_n.setText(String.valueOf(fposicion));
+                            }
+                        }
+                    }
+                }
+    }
+    private void Mover_j2(){
+    Ficha f = new Ficha();
+    if(fposicion2 >=1 && fposicion2<=11   ){
+                x = f.calcPosicion_x(fposicion2);
+                F2.setBounds(x,560,41,41);
+                x=0;
+                }else{
+                    if(fposicion2 >=12 && fposicion2 <=21 ){
+                        y = f.calcPosicion_y(fposicion2);F2.setBounds(45,y,41,41);}
+                    else{
+                        if(fposicion2 >=22 && fposicion2 <=31){
+                        x = f.calcPosicion_x(fposicion2); F2.setBounds(x,60,41,41);
+                        }
+                        else{
+                            if(fposicion2 >=32 && fposicion2 <=40){
+                            y = f.calcPosicion_y(fposicion2);F2.setBounds(555,y,41,41);Ju1_sal_n.setText(String.valueOf(fposicion));
+                            }
+                        }
+                    }
+                }
     }
     private void addButton_Lanzar(){
         Lanzar.setBounds(640,470, 100, 50);
@@ -271,6 +306,21 @@ public class Mesa {
         Dado_2 = d.getD2();
         Dadon2.setText(String.valueOf(Dado_2));
         pares = d.getEstado();
+        if(Turn.getText()== Nombre){
+        fposicion=fposicion+Dadosuma;
+        if(fposicion>40){
+            int r= 0;
+            fposicion=r;
+        }
+        }else{
+            if(Turn.getText()== Nombre2){      
+                fposicion2=fposicion2+Dadosuma;
+                if(fposicion2>40){
+                    int r= 0;
+                    fposicion2=r;
+                }
+            }
+        }      
     }
     
     private void addButton_Comprar(){
@@ -300,6 +350,11 @@ public class Mesa {
     private void addF1() {
         F1.setBounds(555,560,41,41);
         frame.add(F1);
+
+    }
+    private void addF2() {
+        F2.setBounds(555,570,41,41);
+        frame.add(F2);
 
     }
     
