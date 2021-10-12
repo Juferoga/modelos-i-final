@@ -217,9 +217,18 @@ public class Mesa {
                 int x;
                 int y;
                 fposicion = fposicion +1;
+                if(fposicion >=1 && fposicion<=11  ){
                 x = f.calcPosicion_x(fposicion);
                 F1.setBounds(x,560,41,41);
-                
+                }else{
+                    if(fposicion >=12 && fposicion <=21){
+                        y = f.calcPosicion_y(fposicion);F1.setBounds(45,y,41,41);}
+                    else{
+                        if(fposicion >=22 && fposicion<=31){
+                        x = f.calcPosicion_x(fposicion); F1.setBounds(x,60,41,41);
+                        }
+                    }
+                }
             }  
         }); 
         

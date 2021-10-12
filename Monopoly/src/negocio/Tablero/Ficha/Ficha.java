@@ -53,7 +53,7 @@ public class Ficha {
             else{
                 if (posicion >= 3 || posicion >= 11){ return 495 -(50*(posicion-2)); }
                 else{
-                    if (posicion >= 21 || posicion == 31){ return 25*3; }
+                    if (posicion >= 22 || posicion >= 31){ return 105; }
                     else{
                         return 0;
                     }
@@ -63,39 +63,15 @@ public class Ficha {
    }
 
    public int calcPosicion_y(int posicion){
-        if(posicion >= 1 || posicion <= 11 ){ return 25;  }
-        else{
-            if(posicion >= 21 || posicion <=31 ){ return 25*11; }
+            if(posicion == 12 ){ return 510; }
             else{
-                if (posicion == 12 || posicion == 39){ return 25*2; }
+                if (posicion >= 13 || posicion >= 21){ return 510-(50 * (posicion-12)); }
                 else{
-                    if (posicion == 13 || posicion == 38){ return 25*3; }
+                    if (posicion >= 31 || posicion == 50){ return 25*3; }
                     else{
-                        if (posicion == 14 || posicion == 37){ return 25*4; }
-                        else{
-                            if (posicion == 15 || posicion == 36){ return 25*5; }
-                            else{
-                                if (posicion == 16 || posicion == 35){ return 25*6; }
-                                else{
-                                    if (posicion == 17 || posicion == 34){ return 25*7; }
-                                    else{
-                                        if (posicion == 18 || posicion == 33){ return 25*8; }
-                                        else{
-                                            if (posicion == 19 || posicion == 32){ return 25*9; }
-                                            else{
-                                                if (posicion == 20 || posicion == 31){ return 25*10; }
-                                                else{
-                                                    return 0;
-                                                }
-                                            }
-                                        }
-                                    }   
-                                }
-                            }
-                        }
+                        return 0;
                     }
                 }
-            }
-        }
+            }  
    }
 }
