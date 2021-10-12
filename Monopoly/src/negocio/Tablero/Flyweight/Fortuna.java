@@ -12,12 +12,12 @@ public class Fortuna implements FlyweightSuerte {
         this.tipo = Tipo;
     }
     
-    public void ObtenerSuerte(){
+    public String ObtenerSuerte(){
         String[] Fortuna = new String[]{"Gris con manchas negras","Naranja con manchas negras",
                                        "Negra con manchas blancas","Negro","blanco","Naranja"};
         Random r = new Random();
         int posicion = r.nextInt(Fortuna.length);
         this.fortuna = Fortuna[posicion];
-        System.out.println(fortuna+" \n");
+        return fortuna;
     }
 }

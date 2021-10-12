@@ -2,12 +2,12 @@ package negocio.Tablero.FactoryMethod;
 
 public class ServicioFabrica {
 
-    public Servicio getServicio(String tipo){
+    public Servicio getServicio(String tipo , int p , String n){
 
         if(tipo.equalsIgnoreCase("Electricidad")){
-            return new ServicioLuz();
+            return new ServicioLuz(p,n);
         } else if (tipo.equalsIgnoreCase("Acueducto")){
-            return new ServicioAgua();
+            return new ServicioAgua(p,n);
 
         }else{
             return null;

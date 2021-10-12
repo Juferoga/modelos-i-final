@@ -14,13 +14,11 @@ public class FabricaSuerte
         FlyweightSuerte carta = cartaMap.get(key);
          
         if(carta != null) {
-            System.out.println("Estado: Ya existe");
             return carta;
         } else {
             carta= new Suerte();
             carta.setTipo(tipo);
             cartaMap.put(key, carta);
-            System.out.println("Estado: Se creo");
         }
          
         return carta;
@@ -34,13 +32,11 @@ public class FabricaSuerte
         FlyweightSuerte carta = cartaMap.get(key);
          
         if(carta != null) {
-            System.out.println("Estado: Ya existe");
             return carta;
         } else {
             carta= new Fortuna();
             carta.setTipo(tipo);
             cartaMap.put(key, carta);
-            System.out.println("Estado: Se creo");
         }
          
         return carta;

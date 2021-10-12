@@ -1,5 +1,7 @@
 package negocio.Tablero.FabricaPropiedades.Productos;
 
 public interface Propiedad {  
-    void Mostrar();
+
+    String getNombre();
+    int getPrecio();
 }

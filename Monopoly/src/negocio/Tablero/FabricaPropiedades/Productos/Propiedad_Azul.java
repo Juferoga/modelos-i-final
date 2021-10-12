@@ -2,13 +2,21 @@ package negocio.Tablero.FabricaPropiedades.Productos;
 
 public class Propiedad_Azul implements Propiedad {
 
-    private String Nombre;
-    private int Precio;
-    private boolean Comprado;
+    int valor;
+    String Nombre;
+
+    public Propiedad_Azul (int p ,String n){
+        this.Nombre = n;
+        this.valor = p;
+    }
 
     @Override
-    public void Mostrar() {
-        System.out.println("Creo propiedad Azul");
+    public String getNombre() {
+        return this.Nombre;
+    }
+    @Override
+    public int getPrecio() {
+        return this.valor;
     }
     
 }

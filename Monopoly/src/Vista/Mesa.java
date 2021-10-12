@@ -19,7 +19,7 @@ public class Mesa {
 
     // Juferoga :)
     
-    String dir = "/home/juferoga/repos/ud/modelos-i-final/Monopoly/src/assets/";
+    String dir = "/home/brayan/modelos-i-final/Monopoly/src/assets/";
     //            /home/juferoga/repos/ud/modelos-i-final/Monopoly/src/assets/
 
     private JPanel Imagenes;
@@ -214,20 +214,24 @@ public class Mesa {
     
     private void Mover_j1(){
     Ficha f = new Ficha();
+    Operaciones op = new Operaciones(fposicion2);
     if(fposicion >=1 && fposicion<=11   ){
                 x = f.calcPosicion_x(fposicion);
                 F1.setBounds(x,560,41,41);
                 x=0;
                 }else{
                     if(fposicion >=12 && fposicion <=21 ){
-                        y = f.calcPosicion_y(fposicion);F1.setBounds(45,y,41,41);}
+                        y = f.calcPosicion_y(fposicion);F1.setBounds(45,y,41,41);
+            op.frame.setVisible(true);}
                     else{
                         if(fposicion >=22 && fposicion <=31){
                         x = f.calcPosicion_x(fposicion); F1.setBounds(x,60,41,41);
+            op.frame.setVisible(true);
                         }
                         else{
                             if(fposicion >=32 && fposicion <=40){
                             y = f.calcPosicion_y(fposicion);F1.setBounds(555,y,41,41);
+            op.frame.setVisible(true);
                             }
                         }
                     }
@@ -235,24 +239,29 @@ public class Mesa {
     }
     private void Mover_j2(){
     Ficha f = new Ficha();
+    Operaciones op = new Operaciones(fposicion2);
     if(fposicion2 >=1 && fposicion2<=11   ){
                 x = f.calcPosicion_x(fposicion2);
                 F2.setBounds(x,560,41,41);
                 x=0;
                 }else{
                     if(fposicion2 >=12 && fposicion2 <=21 ){
-                        y = f.calcPosicion_y(fposicion2);F2.setBounds(45,y,41,41);}
+                        y = f.calcPosicion_y(fposicion2);F2.setBounds(45,y,41,41);op.frame.setVisible(true);
+            op.frame.setVisible(true);}
                     else{
                         if(fposicion2 >=22 && fposicion2 <=31){
-                        x = f.calcPosicion_x(fposicion2); F2.setBounds(x,60,41,41);
+                        x = f.calcPosicion_x(fposicion2); F2.setBounds(x,60,41,41);op.frame.setVisible(true);
+            op.frame.setVisible(true);
                         }
                         else{
                             if(fposicion2 >=32 && fposicion2 <=40){
                             y = f.calcPosicion_y(fposicion2);F2.setBounds(555,y,41,41);
+            op.frame.setVisible(true);
                             }
                         }
                     }
                 }
+            
     }
     private void addButton_Lanzar(){
         Lanzar.setBounds(640,470, 100, 50);
@@ -292,6 +301,7 @@ public class Mesa {
         Dado_2 = d.getD2();
         Dadon2.setText(String.valueOf(Dado_2));
         pares = d.getEstado();
+        //Dadosuma=3;
         
         if(Turn.getText()== Nombre && this.carcel1){
             System.out.println((char)27 + "[31m__________________________PLAYER_1_______________________"+ (char)27 + "[0m");
@@ -349,7 +359,9 @@ public class Mesa {
             JOptionPane.showMessageDialog(frame, "Ve a la carcel");
             Mover_j2();
             System.out.println((char)27 + "[32m Carcel: "+carcel2+(char)27 + "[0m");
-        }      
+        }
+        
+
     }
     
     private void addImage() {

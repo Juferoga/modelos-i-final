@@ -3,6 +3,6 @@ public interface FlyweightSuerte
 {
     public void Mostrar();
     public void setTipo(String Tipo);
-    public void ObtenerSuerte();
+    public String ObtenerSuerte();
 
 } 

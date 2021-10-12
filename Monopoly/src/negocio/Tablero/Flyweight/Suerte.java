@@ -11,17 +11,18 @@ public class Suerte implements FlyweightSuerte {
         this.tipo = tipo;
     }
   
-    public void ObtenerSuerte()
+    public String ObtenerSuerte()
     {
         
-        String[] color = new String[]{"Gris con manchas negras","Naranja con manchas negras",
-                                       "Negra con manchas blancas","Negro","blanco","Naranja"};
+        String[] Fortuna = new String[]{"Gana 100","paga 20",
+                                       "gana 200","gana 2","pierde 2","pierde 2"};
         Random r = new Random();
-        int posicion = r.nextInt(color.length);
-        this.Suerte = color[posicion];
-        System.out.println(Suerte+" \n");
+        int posicion = r.nextInt(Fortuna.length);
+        this.Suerte = Fortuna[posicion];
+        return Suerte;
 
     }
+
     @Override
     public void Mostrar( ){
         System.out.println(tipo +"   " + Texto );

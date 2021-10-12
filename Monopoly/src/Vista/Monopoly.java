@@ -14,7 +14,8 @@ public class Monopoly {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Mesa spas = new Mesa();
+        
+        SplashScreen spas = new SplashScreen();
         
     }
     
