@@ -20,7 +20,7 @@ En el programa Monopoly lo utilizamos para convertir las solicitudes de comprar 
 
 Factory Method es un patrón de diseño creacional que proporciona una interfaz para crear objetos en una superclase, mientras permite a las subclases alterar el tipo de objetos que se crearán.
 
-![Diagrama de Clases Patron Factory Method](https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/diagramas/Diagrama_de_clases_FactoryPropiedades.png))
+![Diagrama de Clases Patron Factory Method](https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/diagramas/Diagrama_de_clases_FactoryPropiedades.png)
 
 En el programa Monopoly la utilizamos para crear una fabrica de propiedades, propiedades las cuales son todas y cada una de las tarjetas adquiribles por el usuario final, en donde lo que las diferenciaba era el color de la propiedad, se decidio agruparlo por conjuntos de color ya que nos permitia como programadores verificar el uso de una forma intuitiva del patron utilizado y apropiarnos del uso del mismo.
  
@@ -30,7 +30,7 @@ Un patrón de fábrica o un patrón de método de fábrica dice que simplemente 
 
 El patrón de método de fábrica también se conoce como constructor virtual, que permite crear objetos tal cual como una fabrica lo realizaria dentro del mundo real.
 
-![Diagrama de Clases Patron Factory Method](https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/diagramas/Diagrama_de_clases_FactoryServicios.png))
+![Diagrama de Clases Patron Factory Method](https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/diagramas/Diagrama_de_clases_FactoryServicios.png)
 
 Lo utilizamos  en el juego Monopoly para crear una fabrica de servicios como lo serias el agua y la luz , esto compone la creacion del tablero del juego monopoly
 
