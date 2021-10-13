@@ -14,11 +14,9 @@ Para instalar java dentro del sistema operativo windows te recomendamos utilizar
 
 Para instalar en debian utilizar el comando
 
-´´ bash
-
+``
 $ sudo apt-get install openjdk16-jdk openjdk16-jre
-
-´´
+``
 
 ## Primeros pasos 
 
@@ -32,3 +30,12 @@ Para correr el programa utilizamos la plataforma de desarrollo netbeans aunque t
 
 ![VS code](https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/docs/images/visual-studio-code.svg)
 ![Netbeans](https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/docs/images/netbeans.svg)
+
+# Manual Técnico
+
+## 
+
+# Manual de Usuario
+
+##
+
