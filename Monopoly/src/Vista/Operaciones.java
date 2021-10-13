@@ -106,8 +106,8 @@ public class Operaciones  {
         frame.add(Comprar);
         Comprar.addActionListener(new ActionListener(){  
             public void actionPerformed(ActionEvent e){
-               posicion = posicion + 1;
-               getbPropiedad();
+              /* posicion = posicion + 1;
+               getbPropiedad();*/
             }  
         });  
         frame.add(Comprar);
