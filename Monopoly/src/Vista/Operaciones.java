@@ -53,8 +53,6 @@ public class Operaciones {
      addbEmbargar();
      getbPropiedad();
      frame.setVisible(true);
-     
-    
     }    
     
     public void createGUI(){    
@@ -108,6 +106,8 @@ public class Operaciones {
         frame.add(Comprar);
         Comprar.addActionListener(new ActionListener(){  
             public void actionPerformed(ActionEvent e){
+               posicion = posicion + 1;
+               getbPropiedad();
             }  
         });  
         frame.add(Comprar);
@@ -126,46 +126,117 @@ public class Operaciones {
     
     private void getbPropiedad(){
     Propiedades_Fabrica p_fabrica = new Propiedades_Fabrica();
-    if (this.posicion ==1){
+    
+    if (this.posicion ==2){
         Propiedad cafeArabe = p_fabrica.getTipo("marron",60,"cafeArabe");
         nPropiedad.setText(cafeArabe.getNombre());
         nprecio.setText(String.valueOf(cafeArabe.getPrecio()));
     }else{
-        if(this.posicion ==3){
+        if(this.posicion ==4){
         Propiedad cafeOmg = p_fabrica.getTipo("marron",60,"cafeOmg");
         System.out.println( cafeOmg.getNombre()+" precioo " + cafeOmg.getPrecio());
         nPropiedad.setText(cafeOmg.getNombre());
         nprecio.setText(String.valueOf(cafeOmg.getPrecio()));
         }else{
-            if(this.posicion ==2){
+            if(this.posicion ==3){
                 FlyweightSuerte suerte1 = FabricaSuerte.getSuerte( "Suerte" );
                 JOptionPane.showMessageDialog(frame, suerte1.ObtenerSuerte());
-                frame.setVisible(false);          
+                //frame.setVisible(false);          
             }
             else {
-                if(this.posicion ==4){
+                if(this.posicion ==5){
                 JOptionPane.showMessageDialog(frame, "paga 200");
-                frame.setVisible(false);
+                //frame.setVisible(false);
                 }
                 else{
-                    if(this.posicion ==5){
-                            Propiedad amarilloRadio = p_fabrica.getTipo("azul",100 , "amarilloRadio");
-                            nPropiedad.setText(amarilloRadio.getNombre());
-                            nprecio.setText(String.valueOf(amarilloRadio.getPrecio()));
-        
-        
+                    if(this.posicion ==6){
+                        Tren tren = new TrenCreador();
+                        tren.setNombre("Transmileni 1");
+                        nPropiedad.setText(tren.getNombre());
+                        nprecio.setText(String.valueOf(tren.getPrecio()));
                     }
                     else{
-                        if(this.posicion ==6){
-                        FlyweightSuerte suerte2 = FabricaSuerte.getSuerte( "Suerte" );    
-                        JOptionPane.showMessageDialog(frame, suerte2.ObtenerSuerte());
-                        frame.setVisible(false);
+                        if(this.posicion ==7){
+                        Propiedad amarilloRadio = p_fabrica.getTipo("azul",100 , "amarilloRadio");
+                        nPropiedad.setText(amarilloRadio.getNombre());
+                        nprecio.setText(String.valueOf(amarilloRadio.getPrecio()));    
                         }
                         else{
-                            if(this.posicion ==7){
-                            Propiedad amarilloNoticias = p_fabrica.getTipo("azul",100,"amarilloNoticias");
-                            nPropiedad.setText(amarilloNoticias.getNombre());
-                            nprecio.setText(String.valueOf(amarilloNoticias.getPrecio()));
+                            if(this.posicion ==8){
+                            FlyweightSuerte Fortuna1 = FabricaSuerte.getFortuna( "FORTUNA" );;    
+                            JOptionPane.showMessageDialog(frame, Fortuna1.ObtenerSuerte());
+                            //frame.setVisible(false);    
+                            }
+                            else{
+                                if(this.posicion ==9){
+                                Propiedad amarilloNoticias = p_fabrica.getTipo("azul",100,"amarilloNoticias");
+                                nPropiedad.setText(amarilloNoticias.getNombre());
+                                nprecio.setText(String.valueOf(amarilloNoticias.getPrecio()));
+                                }
+                                else{
+                                    if(this.posicion ==10){
+                                    Propiedad amarilloCCTV = p_fabrica.getTipo("azul",120,"amarilloCCTV");
+                                    nPropiedad.setText(amarilloCCTV.getNombre());
+                                    nprecio.setText(String.valueOf(amarilloCCTV.getPrecio()));
+                                    }
+                                    else{
+                                        if (this.posicion ==11){
+                                            JOptionPane.showMessageDialog(frame,"Solo de paseo en la carcel");
+                                        }
+                                        else{
+                                            if(this.posicion ==12){
+                                            Propiedad rinhoMail = p_fabrica.getTipo("morado",140 , "rinhoMail");
+                                            nPropiedad.setText(rinhoMail.getNombre());
+                                            nprecio.setText(String.valueOf(rinhoMail.getPrecio()));
+                                            }
+                                            else{
+                                                if(this.posicion ==13){
+                                                /*Servicio luz = fabrica.getServicio("Electricidad",150 ,"Planta nuclear");
+                                                nPropiedad.setText(luz.getNombre());
+                                                nprecio.setText(String.valueOf(luz.getPrecio()));*/
+                                                }
+                                                else{
+                                                    if(this.posicion ==14){
+                                                    Propiedad almacenesPiloto = p_fabrica.getTipo("morado",140 , "almacenesPiloto");
+                                                    nPropiedad.setText(almacenesPiloto.getNombre());
+                                                    nprecio.setText(String.valueOf(almacenesPiloto.getPrecio()));
+                                                    }
+                                                    else{
+                                                        if(this.posicion ==15){
+                                                        Propiedad tiendasArgo = p_fabrica.getTipo("morado",160,"tiendasArgo");
+                                                        nPropiedad.setText(tiendasArgo.getNombre());
+                                                        nprecio.setText(String.valueOf(tiendasArgo.getPrecio()));
+                                                        }
+                                                        else{
+                                                            if(this.posicion ==16){
+                                                            /*Tren tren2 = tren.clone();
+                                                            tren2.setNombre("Transmilenio 2");
+                                                            nPropiedad.setText(tren2.getNombre());
+                                                            nprecio.setText(String.valueOf(tren2.getPrecio()));*/
+                                                            }
+                                                            else{
+                                                                if(this.posicion ==17){
+                                                                Propiedad calleBachue = p_fabrica.getTipo("naranja",160,"calleBachue");
+                                                                nPropiedad.setText(calleBachue.getNombre());
+                                                                nprecio.setText(String.valueOf(calleBachue.getPrecio()));    
+                                                                }
+                                                                else{
+                                                                    if(this.posicion ==18){
+                                                                    FlyweightSuerte suerte2 = FabricaSuerte.getSuerte( "Suerte" );
+                                                                    JOptionPane.showMessageDialog(frame, suerte2.ObtenerSuerte());
+                                                                    }
+                                                                    else {
+                                                                        if(this.posicion ==19){}
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }                                                
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

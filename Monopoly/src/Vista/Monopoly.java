@@ -16,6 +16,7 @@ public class Monopoly {
     public static void main(String[] args) {
         
         SplashScreen spas = new SplashScreen();
+        //Operaciones op = new Operaciones(1);
         
     }
     

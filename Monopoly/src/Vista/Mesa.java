@@ -214,7 +214,7 @@ public class Mesa {
     
     private void Mover_j1(){
     Ficha f = new Ficha();
-    Operaciones op = new Operaciones(fposicion2);
+    //Operaciones op = new Operaciones(fposicion2);
     if(fposicion >=1 && fposicion<=11   ){
                 x = f.calcPosicion_x(fposicion);
                 F1.setBounds(x,560,41,41);
@@ -222,16 +222,17 @@ public class Mesa {
                 }else{
                     if(fposicion >=12 && fposicion <=21 ){
                         y = f.calcPosicion_y(fposicion);F1.setBounds(45,y,41,41);
-            op.frame.setVisible(true);}
+            //op.frame.setVisible(true);
+                    }
                     else{
                         if(fposicion >=22 && fposicion <=31){
                         x = f.calcPosicion_x(fposicion); F1.setBounds(x,60,41,41);
-            op.frame.setVisible(true);
+            //op.frame.setVisible(true);
                         }
                         else{
                             if(fposicion >=32 && fposicion <=40){
                             y = f.calcPosicion_y(fposicion);F1.setBounds(555,y,41,41);
-            op.frame.setVisible(true);
+            //op.frame.setVisible(true);
                             }
                         }
                     }
@@ -239,24 +240,25 @@ public class Mesa {
     }
     private void Mover_j2(){
     Ficha f = new Ficha();
-    Operaciones op = new Operaciones(fposicion2);
+    //Operaciones op = new Operaciones(fposicion2);
     if(fposicion2 >=1 && fposicion2<=11   ){
                 x = f.calcPosicion_x(fposicion2);
                 F2.setBounds(x,560,41,41);
                 x=0;
                 }else{
                     if(fposicion2 >=12 && fposicion2 <=21 ){
-                        y = f.calcPosicion_y(fposicion2);F2.setBounds(45,y,41,41);op.frame.setVisible(true);
-            op.frame.setVisible(true);}
+                        y = f.calcPosicion_y(fposicion2);F2.setBounds(45,y,41,41);//op.frame.setVisible(true);
+            //op.frame.setVisible(true);
+                    }
                     else{
                         if(fposicion2 >=22 && fposicion2 <=31){
-                        x = f.calcPosicion_x(fposicion2); F2.setBounds(x,60,41,41);op.frame.setVisible(true);
-            op.frame.setVisible(true);
+                        x = f.calcPosicion_x(fposicion2); F2.setBounds(x,60,41,41);//op.frame.setVisible(true);
+            //op.frame.setVisible(true);
                         }
                         else{
                             if(fposicion2 >=32 && fposicion2 <=40){
                             y = f.calcPosicion_y(fposicion2);F2.setBounds(555,y,41,41);
-            op.frame.setVisible(true);
+           // op.frame.setVisible(true);
                             }
                         }
                     }
