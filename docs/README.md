@@ -5,6 +5,9 @@ title: Inicio
 
 # Monopoly
 
+<a href="./ManualDeUsuario.md">Manual de usuario</a>
+<a href="./ManualTecnico.md">Manual de técnico</a>
+
 ## Juego de monopolio
 
 Para iniciar el juego de monopolio, se tienen que instalar previamente java. Ya que por motivos prácticos para ser multiplataforma aplicamos el el paradigma de mantener el mismo con el codigo fuente, para respaldar las libertades del software libre con las cuales desarrollamos el proyecto. 
