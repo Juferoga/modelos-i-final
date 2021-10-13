@@ -1,3 +1,8 @@
+---
+layout: page
+title: Manual-Tecnico
+---
+
 # Manual Técnico
 
 ## Diagrama de clases general
