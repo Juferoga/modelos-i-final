@@ -1,3 +1,8 @@
+---
+layout: page
+title: Inicio
+---
+
 # Monopoly
 
 ## Juego de monopolio
@@ -25,11 +30,6 @@ Para descargar y utilizar el juego hacemos uso de [github](https://github.com/Ju
 ![github](https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/docs/images/github.png?token=AKG44KMJUBNUFOBJSSGG7ADBNB5Z6)
 
 ## Corriendo el programa
-
----
-layout: page
-title: Inicio
----
 
 Para correr el programa utilizamos la plataforma de desarrollo netbeans aunque también utilizamos Visual Studio code, para esto lo que tenemos que realizar es abrir el proyecto desde una de estas dos plataformas y correr el programa.
 
