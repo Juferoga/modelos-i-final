@@ -4,6 +4,7 @@
 <img align="left" width="0" height="192px" hspace="10"/>
 
 > Juan Felipe Rodríguez Galindo  - **COD. 20181020158**
+<br>
 > Brayan Stiven Yate Prada  - **COD. 20192020151**
 
 <br></br>
