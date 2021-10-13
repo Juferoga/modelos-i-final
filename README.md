@@ -8,6 +8,7 @@
 [![License](https://img.shields.io/badge/License-GPL_V.3-blue?style=flat-square)](https://www.gnu.org/licenses/gpl-3.0.html)
 <br></br>
 Juan Felipe Rodríguez Galindo  - COD. 20181020158
+<br></br>
 Brayan Stiven Yate Prada  - COD. 20192020151
 <br></br>
 <br></br>
