@@ -57,6 +57,8 @@ public class Mesa {
     int fposicion2=1;
     int x,y;
     boolean pares;
+    Jugador j1;
+    Jugador j2;
 
     Image img= new ImageIcon(dir+"TableroF.png").getImage();
     ImageIcon img2=new ImageIcon(img.getScaledInstance(600, 600, Image.SCALE_SMOOTH));           
@@ -65,12 +67,12 @@ public class Mesa {
         
         Imagenes= new JPanel();
         
-        Jugador j1 = new Jugador("Rodolfo");
+        j1 = new Jugador("Rodolfo");
         Nombre=j1.getNombre();
         saldo1=j1.getSaldo();
         carcel1= j1.isCarcel();
         
-        Jugador j2 = new Jugador("Antonio");
+        j2 = new Jugador("Antonio");
         Nombre2=j2.getNombre();
         saldo2=j2.getSaldo();
         carcel2= j2.isCarcel();
@@ -213,58 +215,71 @@ public class Mesa {
     }
     
     private void Mover_j1(){
-    Ficha f = new Ficha();
-    Operaciones op = new Operaciones(fposicion);
-    if(fposicion >=1 && fposicion<=11   ){
-                x = f.calcPosicion_x(fposicion);
-                F1.setBounds(x,560,41,41);
-                x=0;
-                }else{
-                    if(fposicion >=12 && fposicion <=21 ){
-                        y = f.calcPosicion_y(fposicion);F1.setBounds(45,y,41,41);
+        Ficha f = new Ficha();
+        Operaciones op = new Operaciones(fposicion);
+
+        System.out.println("saldo anterior: "+this.saldo1);
+        int precio = this.saldo1 - op.getPrecioPropiedad();
+        this.j1.setSaldo(precio);
+        System.out.println("saldo actual: "+precio);
+        
+        if(fposicion >=1 && fposicion<=11   ){
+            x = f.calcPosicion_x(fposicion);
+            F1.setBounds(x,560,41,41);
+            x=0;
+        }else{
+            if(fposicion >=12 && fposicion <=21 ){
+                y = f.calcPosicion_y(fposicion);F1.setBounds(45,y,41,41);
+                op.frame.setVisible(true);
+            }
+            else{
+                if(fposicion >=22 && fposicion <=31){
+                    x = f.calcPosicion_x(fposicion); F1.setBounds(x,60,41,41);
+                    op.frame.setVisible(true);
+                }
+                else{
+                    if(fposicion >=32 && fposicion <=40){
+                        y = f.calcPosicion_y(fposicion);F1.setBounds(555,y,41,41);
                         op.frame.setVisible(true);
-                    }
-                    else{
-                        if(fposicion >=22 && fposicion <=31){
-                        x = f.calcPosicion_x(fposicion); F1.setBounds(x,60,41,41);
-                        op.frame.setVisible(true);
-                        }
-                        else{
-                            if(fposicion >=32 && fposicion <=40){
-                            y = f.calcPosicion_y(fposicion);F1.setBounds(555,y,41,41);
-                        op.frame.setVisible(true);
-                            }
-                        }
                     }
                 }
+            }
+        }
     }
     private void Mover_j2(){
-    Ficha f = new Ficha();
-    Operaciones op = new Operaciones(fposicion2);
-    if(fposicion2 >=1 && fposicion2<=11   ){
-                x = f.calcPosicion_x(fposicion2);
-                F2.setBounds(x,560,41,41);
-                x=0;
-                }else{
-                    if(fposicion2 >=12 && fposicion2 <=21 ){
-                        y = f.calcPosicion_y(fposicion2);F2.setBounds(45,y,41,41);//op.frame.setVisible(true);
+        Ficha f = new Ficha();
+        Operaciones op = new Operaciones(fposicion2);
+        
+        System.out.println("saldo anterior: "+this.saldo2);
+        int precio = this.saldo2 - op.getPrecioPropiedad();
+        this.j2.setSaldo(precio);
+        System.out.println("saldo actual: "+precio);
+
+        if(fposicion2 >=1 && fposicion2<=11   ){
+            x = f.calcPosicion_x(fposicion2);
+            F2.setBounds(x,560,41,41);
+            x=0;
+        }else{
+            if(fposicion2 >=12 && fposicion2 <=21 ){
+                y = f.calcPosicion_y(fposicion2);F2.setBounds(45,y,41,41);//op.frame.setVisible(true);
+                op.frame.setVisible(true);
+            }
+            else{
+                if(fposicion2 >=22 && fposicion2 <=31){
+                    x = f.calcPosicion_x(fposicion2); F2.setBounds(x,60,41,41);//op.frame.setVisible(true);
+                    op.frame.setVisible(true);
+                }
+                else{
+                    if(fposicion2 >=32 && fposicion2 <=40){
+                        y = f.calcPosicion_y(fposicion2);F2.setBounds(555,y,41,41);
                         op.frame.setVisible(true);
-                    }
-                    else{
-                        if(fposicion2 >=22 && fposicion2 <=31){
-                        x = f.calcPosicion_x(fposicion2); F2.setBounds(x,60,41,41);//op.frame.setVisible(true);
-                        op.frame.setVisible(true);
-                        }
-                        else{
-                            if(fposicion2 >=32 && fposicion2 <=40){
-                            y = f.calcPosicion_y(fposicion2);F2.setBounds(555,y,41,41);
-                            op.frame.setVisible(true);
-                            }
-                        }
                     }
                 }
+            }
+        }
             
     }
+
     private void addButton_Lanzar(){
         Lanzar.setBounds(640,470, 100, 50);
         Lanzar.setBackground(Color.WHITE);

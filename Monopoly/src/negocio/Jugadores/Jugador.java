@@ -6,6 +6,7 @@ public class Jugador /*extends Ficha*/{
     String nombre;
     int saldo;
     private boolean carcel;
+    private int[] propiedades;
 
     public Jugador(String nombre) {
         this.nombre = nombre;
@@ -35,6 +36,14 @@ public class Jugador /*extends Ficha*/{
 
     public void setCarcel(boolean carcel) {
         this.carcel = carcel;
+    }
+
+    public int[] getPropiedades() {
+        return propiedades;
+    }
+
+    public void setPropiedades(int[] propiedades) {
+        this.propiedades = propiedades;
     }
 
 }

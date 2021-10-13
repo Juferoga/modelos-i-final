@@ -13,6 +13,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import negocio.Jugadores.Jugador;
 import negocio.Tablero.FabricaPropiedades.Fabrica.Propiedades_Fabrica;
 import negocio.Tablero.FabricaPropiedades.Productos.Propiedad;
 import negocio.Tablero.FactoryMethod.Servicio;
@@ -40,9 +41,11 @@ public class Operaciones  {
     JButton Comprar = new JButton("Comprar");
     JButton Embargar = new JButton("Embargar");
     int posicion;
+    Jugador jg;
 
     public Operaciones(int p) {
      this.posicion = p;
+     
      createGUI();
      addTitulo();
      addPropiedad();
@@ -106,8 +109,7 @@ public class Operaciones  {
         frame.add(Comprar);
         Comprar.addActionListener(new ActionListener(){  
             public void actionPerformed(ActionEvent e){
-              /* posicion = posicion + 1;
-               getbPropiedad();*/
+              
             }  
         });  
         frame.add(Comprar);
@@ -125,6 +127,7 @@ public class Operaciones  {
     }
     
     private void getbPropiedad() {
+    
     Propiedades_Fabrica p_fabrica = new Propiedades_Fabrica();
     Tren tren = new TrenCreador();
     ServicioFabrica fabrica = new ServicioFabrica();
@@ -317,6 +320,137 @@ public class Operaciones  {
             JOptionPane.showMessageDialog(frame,"Vea pues");
             break;
         }
+    
+    }
+    
+    public int getPrecioPropiedad() {
+        
+        int price = 0;
+    
+        switch (this.posicion) {
+            case 2:
+                price = 60;
+                break;
+            case 3:
+                price = 0;
+                break;
+            case 4:
+                price = 60;
+                break;
+            case 5:
+                price = 200;
+                break;
+            case 6:
+                price = 200;
+                break;
+            case 7:
+                price = 100;
+                break;
+            case 8:
+                price = -20;
+                break;
+            case 9:
+                price = 100;
+                break;
+            case 10:
+                price = 120;
+                break;
+            case 11:
+                JOptionPane.showMessageDialog(frame,"Solo de paseo en la carcel");
+                break;    
+            case 12:
+                price = 140 ;
+                break;                
+            case 13:
+                price = 150;
+                break;    
+            case 14:
+                price =140 ;
+                break;
+            case 15:
+                price = 160;
+                break;
+            case 16:
+                price = 200;
+                break;
+            case 17:
+                price = 160;
+                break;
+            case 18:
+                price  =-20;
+                break;
+            case 19:
+                price = 180;
+                break;
+            case 20:
+                price = 200;
+                break;
+            case 21:
+                JOptionPane.showMessageDialog(frame,"Parqueadero libre");    
+                break;
+            case 22:
+                price = 220;
+                break;
+            case 23:
+                price = 20;
+                break;
+            case 24:
+                price = 220;
+                break;
+            case 25:
+                price = 240;
+                break;
+            case 26:
+                price = 200;
+                break;
+            case 27:
+                price = 260;
+                break;
+            case 28:
+                price = 260;
+                break;
+            case 29:
+                price = 150;
+                break;
+            case 30:
+                price = 280;
+                break;
+            case 31:
+                System.out.println((char)27 + "[31m CARCEL"+ (char)27 + "[0m");
+                break;
+            case 32:
+                price = 300;
+                break;
+            case 33:
+                price = 300;
+                break;
+            case 34:
+                price = -300;
+                break;
+            case 35:
+                price = 320;
+                break;
+            case 36:
+                price = 200;
+                break;
+            case 37:
+                price = -200;
+                break;
+            case 38:
+                price = 320;
+                break;
+            case 39:
+                price = 200;
+                break;
+            case 40:
+                price = 320;
+                break;
+            default:
+                price = 0;
+                break;
+        }
+        
+        return price;
     
     }
 }
