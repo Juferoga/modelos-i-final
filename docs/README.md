@@ -8,7 +8,17 @@ Para iniciar el juego de monopolio, se tienen que instalar previamente java. Ya 
 
 #### Windows
 
-#### Linux
+Para instalar java dentro del sistema operativo windows te recomendamos utilizar l siguiente (guia)[https://github.com/islaterm/software-design-book-es/wiki/JDK-en-Windows]
+
+#### Linux - debian y derivadas
+
+Para instalar en debian utilizar el comando
+
+´´ bash
+
+$ sudo apt-get install openjdk16-jdk openjdk16-jre
+
+´´
 
 ## Primeros pasos 
 
@@ -18,4 +28,6 @@ Para descargar y utilizar el juego hacemos uso de [github](https://github.com/Ju
 
 ## Corriendo el programa
 
-Para correr el programa utilizamos la plataforma 
+Para correr el programa utilizamos la plataforma de desarrollo netbeans aunque también utilizamos Visual Studio code, para esto lo que tenemos que realizar es abrir el proyecto desde una de estas dos plataformas y correr el programa.
+
+![VS code]()
