@@ -226,7 +226,28 @@ public class Operaciones {
                                                                     JOptionPane.showMessageDialog(frame, suerte2.ObtenerSuerte());
                                                                     }
                                                                     else {
-                                                                        if(this.posicion ==19){}
+                                                                        if(this.posicion ==19){
+                                                                        Propiedad calleIguaque = p_fabrica.getTipo("naranja",180,"calleIguaque");
+                                                                        nPropiedad.setText(calleIguaque.getNombre());
+                                                                        nprecio.setText(String.valueOf(calleIguaque.getPrecio()));
+                                                                        }
+                                                                        else{
+                                                                            if(posicion ==20){
+                                                                            Propiedad calleBague = p_fabrica.getTipo("naranja",200,"calleBague");
+                                                                            nPropiedad.setText(calleBague.getNombre());
+                                                                            nprecio.setText(String.valueOf(calleBague.getPrecio()));    
+                                                                            }
+                                                                            else{
+                                                                                if(posicion ==21){
+                                                                                JOptionPane.showMessageDialog(frame,"Parqueadero libre");    
+                                                                                }
+                                                                                else{
+                                                                                    if(posicion ==22){
+                                                                                    Propiedad Zapateria = p_fabrica.getTipo("rojo",220,"Zapateria");    
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
                                                                     }
                                                                 }
                                                             }
