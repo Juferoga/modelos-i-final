@@ -1,42 +1,37 @@
-<h1>Monopoly</h1>
+---
+layout: page
+title: Inicio
+---
 
-<a href="./ManualDeUsuario.md">Manual de usuario</a>
-<a href="./ManualTecnico.md">Manual de técnico</a>
+# Monopoly
 
-<h2>Juego de monopolio</h2>
+## Juego de monopolio
 
 Para iniciar el juego de monopolio, se tienen que instalar previamente java. Ya que por motivos prácticos para ser multiplataforma aplicamos el el paradigma de mantener el mismo con el codigo fuente, para respaldar las libertades del software libre con las cuales desarrollamos el proyecto. 
 
-<h3>instalando java</h3>
+### instalando java
 
-<h4>Windows</h4>
+#### Windows
 
 Para instalar java dentro del sistema operativo windows te recomendamos utilizar l siguiente [guia](https://github.com/islaterm/software-design-book-es/wiki/JDK-en-Windows)
-<a href="https://github.com/islaterm/software-design-book-es/wiki/JDK-en-Windows" target="_blank" rel="noopener noreferrer">GUIA</a>
 
-<h4> Linux - debian y derivadas </h4>
+#### Linux - debian y derivadas
 
 Para instalar en debian utilizar el comando
 
-<code>
+``
 $ sudo apt-get install openjdk16-jdk openjdk16-jre
-</code>
+``
 
-<h2> Primeros pasos </h2>
+## Primeros pasos 
 
 Para descargar y utilizar el juego hacemos uso de [github](https://github.com/Juferoga/modelos-i-final) para alojar el código 
-<a href="https://github.com/Juferoga/modelos-i-final" target="_blank" rel="noopener noreferrer">GUIA</a>
 
 ![github](https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/docs/images/github.png?token=AKG44KMJUBNUFOBJSSGG7ADBNB5Z6)
 
-<img src="https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/docs/images/github.png?token=AKG44KMJUBNUFOBJSSGG7ADBNB5Z6" alt="github">
-
-<h2> Corriendo el programa </h2>
+## Corriendo el programa
 
 Para correr el programa utilizamos la plataforma de desarrollo netbeans aunque también utilizamos Visual Studio code, para esto lo que tenemos que realizar es abrir el proyecto desde una de estas dos plataformas y correr el programa.
 
 ![VS code](https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/docs/images/visual-studio-code.svg)
 ![Netbeans](https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/docs/images/netbeans.svg)
-
-<img src="https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/docs/images/visual-studio-code.svg" alt="VS Code">
-<img src="https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/docs/images/netbeans.svg" alt="NetBeans">
