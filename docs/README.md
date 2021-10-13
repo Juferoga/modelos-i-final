@@ -1,4 +1,4 @@
-# Manual de usuario
+# Monopoly
 
 ## Juego de monopolio
 
@@ -8,7 +8,7 @@ Para iniciar el juego de monopolio, se tienen que instalar previamente java. Ya 
 
 #### Windows
 
-Para instalar java dentro del sistema operativo windows te recomendamos utilizar l siguiente (guia)[https://github.com/islaterm/software-design-book-es/wiki/JDK-en-Windows]
+Para instalar java dentro del sistema operativo windows te recomendamos utilizar l siguiente [guia](https://github.com/islaterm/software-design-book-es/wiki/JDK-en-Windows)
 
 #### Linux - debian y derivadas
 
@@ -30,12 +30,3 @@ Para correr el programa utilizamos la plataforma de desarrollo netbeans aunque t
 
 ![VS code](https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/docs/images/visual-studio-code.svg)
 ![Netbeans](https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/docs/images/netbeans.svg)
-
-# Manual Técnico
-
-## 
-
-# Manual de Usuario
-
-##
-
