@@ -1,8 +1,3 @@
----
-layout: page
-title: Manual-Usuario
----
-
 # Manual de Usuario
 
 ## Iniciando el programa

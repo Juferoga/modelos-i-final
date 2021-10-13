@@ -1,8 +1,3 @@
----
-layout: page
-title: Inicio
----
-
 # Monopoly
 
 ## Juego de monopolio
