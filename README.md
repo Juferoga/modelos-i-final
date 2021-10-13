@@ -13,7 +13,9 @@ Juan Felipe Rodríguez Galindo  - COD. 20181020158
 Brayan Stiven Yate Prada  - COD. 20192020151
 <br></br>
 
-Repositorio para almacenar el proyecto final de Modelos de programación 1.
+# Info
+
+Repositorio para almacenar el proyecto final de Modelos de programación 1, en este acaso el juego es monopoly, puede ver más información en la [página web](https://juferoga.github.io/modelos-i-final/)
 
 # Content
 
