@@ -9,8 +9,9 @@ import java.awt.*;
 
 public class SplashScreen {
 
-     String dir = "/home/brayan/repos/modelos-i-final/Monopoly/src/assets/";
-
+     String dir = "/home/juferoga/repos/ud/modelos-i-final/Monopoly/src/assets/";
+     // /home/juferoga/repos/ud/modelos-i-final/Monopoly/src/assets/
+     
     JFrame frame;
     JLabel image = new JLabel(new ImageIcon(dir+"CarF.png"));
     JLabel text = new JLabel("Monopoly Game");

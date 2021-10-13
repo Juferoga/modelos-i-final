@@ -17,7 +17,7 @@ public class Monopoly {
         
        // SplashScreen spas = new SplashScreen();
         //Operaciones op = new Operaciones(1);
-        Mesa m = new Mesa();
+        SplashScreen m = new SplashScreen();
         
     }
     

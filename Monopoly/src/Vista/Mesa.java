@@ -19,7 +19,7 @@ public class Mesa {
 
     // Juferoga :)
     
-    String dir = "/home/brayan/modelos-i-final/Monopoly/src/assets/";
+    String dir = "/home/juferoga/repos/ud/modelos-i-final/Monopoly/src/assets/";
     //            /home/juferoga/repos/ud/modelos-i-final/Monopoly/src/assets/
 
     private JPanel Imagenes;
@@ -53,8 +53,8 @@ public class Mesa {
     int Dado_1;
     int Dado_2;
     int Dadosuma;
-    int fposicion=0;
-    int fposicion2=0;
+    int fposicion=1;
+    int fposicion2=1;
     int x,y;
     boolean pares;
 

@@ -10,7 +10,7 @@ public class Jugador /*extends Ficha*/{
     public Jugador(String nombre) {
         this.nombre = nombre;
         this.saldo = 50000;
-        this.carcel = false;
+        this.carcel = true;
     }
   
     public String getNombre() {

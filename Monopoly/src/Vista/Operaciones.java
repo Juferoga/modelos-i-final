@@ -128,205 +128,195 @@ public class Operaciones  {
     Propiedades_Fabrica p_fabrica = new Propiedades_Fabrica();
     Tren tren = new TrenCreador();
     ServicioFabrica fabrica = new ServicioFabrica();
-    
-    if (this.posicion ==2){
-        Propiedad cafeArabe = p_fabrica.getTipo("marron",60,"cafeArabe");
-        nPropiedad.setText(cafeArabe.getNombre());
-        nprecio.setText(String.valueOf(cafeArabe.getPrecio()));
-    }else{
-        if(this.posicion ==4){
-        Propiedad cafeOmg = p_fabrica.getTipo("marron",60,"cafeOmg");
-        System.out.println( cafeOmg.getNombre()+" precioo " + cafeOmg.getPrecio());
-        nPropiedad.setText(cafeOmg.getNombre());
-        nprecio.setText(String.valueOf(cafeOmg.getPrecio()));
-        }else{
-            if(this.posicion ==3){
-                FlyweightSuerte suerte1 = FabricaSuerte.getSuerte( "Suerte" );
-                JOptionPane.showMessageDialog(frame, suerte1.ObtenerSuerte());
-                //frame.setVisible(false);          
-            }
-            else {
-                if(this.posicion ==5){
-                JOptionPane.showMessageDialog(frame, "paga 200");
-                //frame.setVisible(false);
-                }
-                else{
-                    if(this.posicion ==6){
-                        
-                        tren.setNombre("Transmileni 1");
-                        nPropiedad.setText(tren.getNombre());
-                        nprecio.setText(String.valueOf(tren.getPrecio()));
-                    }
-                    else{
-                        if(this.posicion ==7){
-                        Propiedad amarilloCCTV = p_fabrica.getTipo("azul",100 , "amarilloCCTV");
-                        nPropiedad.setText(amarilloCCTV.getNombre());
-                        nprecio.setText(String.valueOf(amarilloCCTV.getPrecio()));    
-                        }
-                        else{
-                            if(this.posicion ==8){
-                            FlyweightSuerte Fortuna1 = FabricaSuerte.getFortuna( "FORTUNA" );;    
-                            JOptionPane.showMessageDialog(frame, Fortuna1.ObtenerSuerte());
-                            //frame.setVisible(false);    
-                            }
-                            else{
-                                if(this.posicion ==9){
-                                Propiedad amarilloNoticias = p_fabrica.getTipo("azul",100,"amarilloNoticias");
-                                nPropiedad.setText(amarilloNoticias.getNombre());
-                                nprecio.setText(String.valueOf(amarilloNoticias.getPrecio()));
-                                }
-                                else{
-                                    if(this.posicion ==10){
-                                    Propiedad amarilloRadio = p_fabrica.getTipo("azul",120,"amarilloRadio");
-                                    nPropiedad.setText(amarilloRadio.getNombre());
-                                    nprecio.setText(String.valueOf(amarilloRadio.getPrecio()));
-                                    }
-                                    else{
-                                        if (this.posicion ==11){
-                                            JOptionPane.showMessageDialog(frame,"Solo de paseo en la carcel");
-                                        }
-                                        else{
-                                            if(this.posicion ==12){
-                                            Propiedad rinhoMail = p_fabrica.getTipo("morado",140 , "rinhoMail");
-                                            nPropiedad.setText(rinhoMail.getNombre());
-                                            nprecio.setText(String.valueOf(rinhoMail.getPrecio()));
-                                            }
-                                            else{
-                                                if(this.posicion ==13){
-                                                Servicio luz = fabrica.getServicio("Electricidad",150 ,"Planta nuclear");
-                                                nPropiedad.setText(luz.getNombre());
-                                                nprecio.setText(String.valueOf(luz.getPrecio()));
-                                                }
-                                                else{
-                                                    if(this.posicion ==14){
-                                                    Propiedad almacenesPiloto = p_fabrica.getTipo("morado",140 , "almacenesPiloto");
-                                                    nPropiedad.setText(almacenesPiloto.getNombre());
-                                                    nprecio.setText(String.valueOf(almacenesPiloto.getPrecio()));
-                                                    }
-                                                    else{
-                                                        if(this.posicion ==15){
-                                                        Propiedad tiendasArgo = p_fabrica.getTipo("morado",160,"tiendasArgo");
-                                                        nPropiedad.setText(tiendasArgo.getNombre());
-                                                        nprecio.setText(String.valueOf(tiendasArgo.getPrecio()));
-                                                        }
-                                                        else{
-                                                            if(this.posicion ==16){
-                                                            Tren tren2 = new TrenCreador();
-                                                            tren2.setNombre("Transmilenio 2");
-                                                            nPropiedad.setText(tren2.getNombre());
-                                                            nprecio.setText(String.valueOf(tren2.getPrecio()));
-                                                            }
-                                                            else{
-                                                                if(this.posicion ==17){
-                                                                Propiedad calleBachue = p_fabrica.getTipo("naranja",160,"calleBachue");
-                                                                nPropiedad.setText(calleBachue.getNombre());
-                                                                nprecio.setText(String.valueOf(calleBachue.getPrecio()));    
-                                                                }
-                                                                else{
-                                                                    if(this.posicion ==18){
-                                                                    FlyweightSuerte suerte2 = FabricaSuerte.getSuerte( "Suerte" );
-                                                                    JOptionPane.showMessageDialog(frame, suerte2.ObtenerSuerte());
-                                                                    }
-                                                                    else {
-                                                                        if(this.posicion ==19){
-                                                                        Propiedad calleIguaque = p_fabrica.getTipo("naranja",180,"calleIguaque");
-                                                                        nPropiedad.setText(calleIguaque.getNombre());
-                                                                        nprecio.setText(String.valueOf(calleIguaque.getPrecio()));
-                                                                        }
-                                                                        else{
-                                                                            if(posicion ==20){
-                                                                            Propiedad calleBague = p_fabrica.getTipo("naranja",200,"calleBague");
-                                                                            nPropiedad.setText(calleBague.getNombre());
-                                                                            nprecio.setText(String.valueOf(calleBague.getPrecio()));    
-                                                                            }
-                                                                            else{
-                                                                                if(posicion ==21){
-                                                                                JOptionPane.showMessageDialog(frame,"Parqueadero libre");    
-                                                                                }
-                                                                                else{
-                                                                                    if(posicion ==22){
-                                                                                    Propiedad Zapateria = p_fabrica.getTipo("rojo",220,"Zapateria");
-                                                                                    nPropiedad.setText(Zapateria.getNombre());
-                                                                                    nprecio.setText(String.valueOf(Zapateria.getPrecio()));    
-                                                                                    }
-                                                                                    else{
-                                                                                        if(posicion ==23){
-                                                                                        FlyweightSuerte Fortuna2 = FabricaSuerte.getFortuna( "FORTUNA" );;    
-                                                                                        JOptionPane.showMessageDialog(frame, Fortuna2.ObtenerSuerte());    
-                                                                                        }
-                                                                                        else{
-                                                                                            if(posicion ==24){
-                                                                                                Propiedad BolsosYmochilas = p_fabrica.getTipo("rojo",220,"Bolsos y mochilas");
-                                                                                                nPropiedad.setText(BolsosYmochilas.getNombre());
-                                                                                                nprecio.setText(String.valueOf(BolsosYmochilas.getPrecio()));
-                                                                                            }
-                                                                                            else{
-                                                                                                if(posicion ==25){
-                                                                                                Propiedad  Accesorios= p_fabrica.getTipo("rojo",240,"Accesorios");
-                                                                                                nPropiedad.setText(Accesorios.getNombre());
-                                                                                                nprecio.setText(String.valueOf(Accesorios.getPrecio()));
-                                                                                                }
-                                                                                                else{
-                                                                                                    if(posicion ==26){
-                                                                                                    Tren tren3 = new TrenCreador();
-                                                                                                    tren3.setNombre("Trasmilenio 3");
-                                                                                                    nPropiedad.setText(tren3.getNombre());
-                                                                                                    nprecio.setText(String.valueOf(tren3.getPrecio()));    
-                                                                                                    }
-                                                                                                    else{
-                                                                                                        if(posicion ==27){
-                                                                                                        Propiedad almacenesTriunfo = p_fabrica.getTipo("amarillo", 260 ,"almacenesTriunfo");
-                                                                                                        nPropiedad.setText(almacenesTriunfo.getNombre());
-                                                                                                        nprecio.setText(String.valueOf(almacenesTriunfo.getPrecio()));
-                                                                                                        }
-                                                                                                        else{
-                                                                                                            if(posicion ==28){
-                                                                                                            Propiedad almacenesLa18 = p_fabrica.getTipo("amarillo",260 ,"almacenesLa18");
-                                                                                                            nPropiedad.setText(almacenesLa18.getNombre());
-                                                                                                            nprecio.setText(String.valueOf(almacenesLa18.getPrecio()));
-                                                                                                            }
-                                                                                                            else{
-                                                                                                                if(posicion ==29){
-                                                                                                                Servicio agua = fabrica.getServicio("Acueducto",150,"Planta de agua");
-                                                                                                                nPropiedad.setText(agua.getNombre());
-                                                                                                                nprecio.setText(String.valueOf(agua.getPrecio()));
-                                                                                                                }
-                                                                                                                else{
-                                                                                                                    if(posicion ==30){
-                                                                                                                        Propiedad almacenesMiCasa = p_fabrica.getTipo("amarillo", 280, "almacenesMiCasa");
-                                                                                                                        nPropiedad.setText(almacenesMiCasa.getNombre());
-                                                                                                                        nprecio.setText(String.valueOf(almacenesMiCasa.getPrecio()));
-                                                                                                                    }
-                                                                                                                }
-                                                                                                            }
-                                                                                                        }
-                                                                                                    }
-                                                                                                }
-                                                                                            }
-                                                                                        }
-                                                                                    }
-                                                                                }
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }                                                
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+
+    switch (this.posicion) {
+        case 2:
+            Propiedad cafeArabe = p_fabrica.getTipo("marron",60,"cafeArabe");
+            nPropiedad.setText(cafeArabe.getNombre());
+            nprecio.setText(String.valueOf(cafeArabe.getPrecio()));    
+            break;
+        case 3:
+            FlyweightSuerte suerte1 = FabricaSuerte.getSuerte( "Suerte" );
+            JOptionPane.showMessageDialog(frame, suerte1.ObtenerSuerte());
+            break;
+        case 4:
+            Propiedad cafeOmg = p_fabrica.getTipo("marron",60,"cafeOmg");
+            System.out.println( cafeOmg.getNombre()+" precioo " + cafeOmg.getPrecio());
+            nPropiedad.setText(cafeOmg.getNombre());
+            nprecio.setText(String.valueOf(cafeOmg.getPrecio()));        
+            break;
+        case 5:
+            JOptionPane.showMessageDialog(frame, "paga 200");        
+            break;
+        case 6:
+            tren.setNombre("Transmileni 1");
+            nPropiedad.setText(tren.getNombre());
+            nprecio.setText(String.valueOf(tren.getPrecio()));    
+            break;
+        case 7:
+            Propiedad amarilloCCTV = p_fabrica.getTipo("azul",100 , "amarilloCCTV");
+            nPropiedad.setText(amarilloCCTV.getNombre());
+            nprecio.setText(String.valueOf(amarilloCCTV.getPrecio()));    
+            break;
+        case 8:
+            FlyweightSuerte Fortuna1 = FabricaSuerte.getFortuna( "FORTUNA" );;    
+            JOptionPane.showMessageDialog(frame, Fortuna1.ObtenerSuerte());
+            break;
+        case 9:
+            Propiedad amarilloNoticias = p_fabrica.getTipo("azul",100,"amarilloNoticias");
+            nPropiedad.setText(amarilloNoticias.getNombre());
+            nprecio.setText(String.valueOf(amarilloNoticias.getPrecio()));
+            break;
+        case 10:
+            Propiedad amarilloRadio = p_fabrica.getTipo("azul",120,"amarilloRadio");
+            nPropiedad.setText(amarilloRadio.getNombre());
+            nprecio.setText(String.valueOf(amarilloRadio.getPrecio()));
+            break;
+        case 11:
+            JOptionPane.showMessageDialog(frame,"Solo de paseo en la carcel");
+            break;    
+        case 12:
+                Propiedad rinhoMail = p_fabrica.getTipo("morado",140 , "rinhoMail");
+                nPropiedad.setText(rinhoMail.getNombre());
+                nprecio.setText(String.valueOf(rinhoMail.getPrecio()));
+            break;                
+        case 13:
+            Servicio luz = fabrica.getServicio("Electricidad",150 ,"Planta nuclear");
+            nPropiedad.setText(luz.getNombre());
+            nprecio.setText(String.valueOf(luz.getPrecio()));
+            break;    
+        case 14:
+            Propiedad almacenesPiloto = p_fabrica.getTipo("morado",140 , "almacenesPiloto");
+            nPropiedad.setText(almacenesPiloto.getNombre());
+            nprecio.setText(String.valueOf(almacenesPiloto.getPrecio()));
+            break;
+        case 15:
+            Propiedad tiendasArgo = p_fabrica.getTipo("morado",160,"tiendasArgo");
+            nPropiedad.setText(tiendasArgo.getNombre());
+            nprecio.setText(String.valueOf(tiendasArgo.getPrecio()));
+            break;
+        case 16:
+            Tren tren2 = new TrenCreador();
+            tren2.setNombre("Transmilenio 2");
+            nPropiedad.setText(tren2.getNombre());
+            nprecio.setText(String.valueOf(tren2.getPrecio()));
+            break;
+        case 17:
+            Propiedad calleBachue = p_fabrica.getTipo("naranja",160,"calleBachue");
+            nPropiedad.setText(calleBachue.getNombre());
+            nprecio.setText(String.valueOf(calleBachue.getPrecio()));    
+            break;
+        case 18:
+            FlyweightSuerte suerte2 = FabricaSuerte.getSuerte( "Suerte" );
+            JOptionPane.showMessageDialog(frame, suerte2.ObtenerSuerte());
+            break;
+        case 19:
+            Propiedad calleIguaque = p_fabrica.getTipo("naranja",180,"calleIguaque");
+            nPropiedad.setText(calleIguaque.getNombre());
+            nprecio.setText(String.valueOf(calleIguaque.getPrecio()));
+            break;
+        case 20:
+            Propiedad calleBague = p_fabrica.getTipo("naranja",200,"calleBague");
+            nPropiedad.setText(calleBague.getNombre());
+            nprecio.setText(String.valueOf(calleBague.getPrecio()));    
+            break;
+        case 21:
+            JOptionPane.showMessageDialog(frame,"Parqueadero libre");    
+            break;
+        case 22:
+            Propiedad Zapateria = p_fabrica.getTipo("rojo",220,"Zapateria");
+            nPropiedad.setText(Zapateria.getNombre());
+            nprecio.setText(String.valueOf(Zapateria.getPrecio()));    
+            break;
+        case 23:
+            FlyweightSuerte Fortuna2 = FabricaSuerte.getFortuna( "FORTUNA" );;    
+            JOptionPane.showMessageDialog(frame, Fortuna2.ObtenerSuerte());    
+            break;
+        case 24:
+            Propiedad BolsosYmochilas = p_fabrica.getTipo("rojo",220,"Bolsos y mochilas");
+            nPropiedad.setText(BolsosYmochilas.getNombre());
+            nprecio.setText(String.valueOf(BolsosYmochilas.getPrecio()));
+            break;
+        case 25:
+            Propiedad  Accesorios= p_fabrica.getTipo("rojo",240,"Accesorios");
+            nPropiedad.setText(Accesorios.getNombre());
+            nprecio.setText(String.valueOf(Accesorios.getPrecio()));
+            break;
+        case 26:
+            Tren tren3 = new TrenCreador();
+            tren3.setNombre("Trasmilenio 3");
+            nPropiedad.setText(tren3.getNombre());
+            nprecio.setText(String.valueOf(tren3.getPrecio()));    
+            break;
+        case 27:
+            Propiedad almacenesTriunfo = p_fabrica.getTipo("amarillo", 260 ,"almacenesTriunfo");
+            nPropiedad.setText(almacenesTriunfo.getNombre());
+            nprecio.setText(String.valueOf(almacenesTriunfo.getPrecio()));
+            break;
+        case 28:
+            Propiedad almacenesLa18 = p_fabrica.getTipo("amarillo",260 ,"almacenesLa18");
+            nPropiedad.setText(almacenesLa18.getNombre());
+            nprecio.setText(String.valueOf(almacenesLa18.getPrecio()));
+            break;
+        case 29:
+            Servicio agua = fabrica.getServicio("Acueducto",150,"Planta de agua");
+            nPropiedad.setText(agua.getNombre());
+            nprecio.setText(String.valueOf(agua.getPrecio()));
+            break;
+        case 30:
+            Propiedad almacenesMiCasa = p_fabrica.getTipo("amarillo", 280, "almacenesMiCasa");
+            nPropiedad.setText(almacenesMiCasa.getNombre());
+            nprecio.setText(String.valueOf(almacenesMiCasa.getPrecio()));
+            break;
+        case 31:
+            System.out.println((char)27 + "[31m CARCEL"+ (char)27 + "[0m");
+            break;
+        case 32:
+            Propiedad saludSMS = p_fabrica.getTipo("verde", 300, "Salud SMS");
+            nPropiedad.setText(saludSMS.getNombre());
+            nprecio.setText(String.valueOf(saludSMS.getPrecio()));
+            break;
+        case 33:
+            Propiedad saludCTR = p_fabrica.getTipo("verde", 300, "Salud CTR");
+            nPropiedad.setText(saludCTR.getNombre());
+            nprecio.setText(String.valueOf(saludCTR.getPrecio()));
+            break;
+        case 34:
+            FlyweightSuerte Fortuna3 = FabricaSuerte.getFortuna( "FORTUNA" );
+            JOptionPane.showMessageDialog(frame, Fortuna3.ObtenerSuerte());
+            break;
+        case 35:
+            Propiedad saludINT = p_fabrica.getTipo("verde", 320, "Sslud INT");
+            nPropiedad.setText(saludINT.getNombre());
+            nprecio.setText(String.valueOf(saludINT.getPrecio()));
+            break;
+        case 36:
+            Tren tren4 = new TrenCreador();
+            tren4.setNombre("Trasmilenio 4");
+            nPropiedad.setText(tren4.getNombre());
+            nprecio.setText(String.valueOf(tren4.getPrecio()));    
+            break;
+        case 37:
+            FlyweightSuerte Fortuna4 = FabricaSuerte.getFortuna( "FORTUNA" );    
+            JOptionPane.showMessageDialog(frame, Fortuna4.ObtenerSuerte());
+            break;
+        case 38:
+            Propiedad zonaRosa = p_fabrica.getTipo("violeta", 320, "Zona Rosa");
+            nPropiedad.setText(zonaRosa.getNombre());
+            nprecio.setText(String.valueOf(zonaRosa.getPrecio()));
+            break;
+        case 39:
+            JOptionPane.showMessageDialog(frame, "paga 200");        
+            break;
+        case 40:
+            Propiedad calleSeptima = p_fabrica.getTipo("violeta", 320, "calleSeptima");
+            nPropiedad.setText(calleSeptima.getNombre());
+            nprecio.setText(String.valueOf(calleSeptima.getPrecio()));
+            break;
+        default:
+            JOptionPane.showMessageDialog(frame,"Vea pues");
+            break;
         }
-    }
     
     }
-    
-    
 }
