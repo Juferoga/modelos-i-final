@@ -45,6 +45,6 @@ En el programa Monopoly lo utilizamos para la creacion de las "cartas de la suer
 
 Prototype es un patrón de diseño creacional que nos permite copiar objetos existentes sin que el código dependa de sus clases, uno de los patrones en cuales vimos bastante aplicabilidad a través del desarrollo del juego, observamos también que por su facilidad es uno de los patrones más simples y por los cuales dentro de nuestro desarrollo decidimos adoptar.
 
-![Diagrama de Clases Patron Prototype](https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/diagramas/Diagrama_de_clases_prototype.png))
+![Diagrama de Clases Patron Prototype](https://raw.githubusercontent.com/Juferoga/modelos-i-final/main/diagramas/Diagrama_de_clases_prototype.png)
 
 En el programa Monopoly utilizamos este patron para la creacion de los "transmilenios", su principal caracteristica es que al crear un objeto de este tipo podemos clonar este objeto usando un copia profunda, en el que el clon es un objeto individual evitando utilizar el constructor de la clase inicial optimizando el uso y recursos utilizados por el programa.
